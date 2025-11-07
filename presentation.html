@@ -533,158 +533,6 @@
             padding: 10px 20px;
             border-radius: 20px;
         }
-
-
-/* ========== STYLE DLA SLAJDÓW 42-44 ========== */
-
-/* Slajd 42: Wideo w pętli z tekstem etapowym */
-.video-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 0;
-}
-
-.video-blur {
-    filter: blur(12px) brightness(0.6);
-    transition: filter 2s ease-in-out;
-}
-
-.text-stage {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
-}
-
-.text-stage.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.text-stage.hide {
-    opacity: 0;
-    transform: translateY(-30px);
-}
-
-/* Slajd 43: Elegant thank you slide */
-.elegant-box {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(20px);
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: 20px;
-    padding: 60px 80px;
-    box-shadow: 0 30px 100px rgba(0, 0, 0, 0.6);
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.line-by-line p {
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-.slide.active .line-by-line p:nth-child(1) {
-    animation: fadeInUp 1.2s ease-out 0.5s forwards;
-}
-
-.slide.active .line-by-line p:nth-child(2) {
-    animation: fadeInUp 1.2s ease-out 1.2s forwards;
-}
-
-.slide.active .line-by-line p:nth-child(3) {
-    animation: fadeInUp 1.2s ease-out 1.9s forwards;
-}
-
-/* Slajd 44: Handwritten quote effect */
-.handwritten-quote {
-    font-family: 'Brush Script MT', 'Segoe Script', cursive;
-    font-size: 2.8rem;
-    color: #2c3e50;
-    line-height: 1.8;
-    text-align: center;
-    padding: 50px;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 15px;
-    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.4);
-    max-width: 1000px;
-    margin: 0 auto;
-    position: relative;
-}
-
-.handwritten-quote::before {
-    content: '"';
-    font-size: 8rem;
-    color: #e74c3c;
-    position: absolute;
-    top: -30px;
-    left: 30px;
-    opacity: 0.3;
-    font-family: Georgia, serif;
-}
-
-.handwritten-quote blockquote {
-    margin: 0;
-    padding: 0;
-    border: none;
-    position: relative;
-}
-
-.handwritten-line {
-    display: block;
-    opacity: 0;
-    margin-bottom: 20px;
-}
-
-.slide.active .handwritten-line:nth-child(1) {
-    animation: handwritingAppear 2s ease-out 1s forwards;
-}
-
-.slide.active .handwritten-line:nth-child(2) {
-    animation: handwritingAppear 2s ease-out 2.5s forwards;
-}
-
-.slide.active .handwritten-line:nth-child(3) {
-    animation: handwritingAppear 2s ease-out 4s forwards;
-}
-
-@keyframes handwritingAppear {
-    0% {
-        opacity: 0;
-        transform: translateX(-20px) rotate(-2deg);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0) rotate(0deg);
-    }
-}
-
-.date-stamp {
-    margin-top: 40px;
-    font-size: 1.8rem;
-    color: #c0392b;
-    font-weight: bold;
-    font-family: 'Georgia', serif;
-    text-align: center;
-    opacity: 0;
-}
-
-.slide.active .date-stamp {
-    animation: fadeIn 1.5s ease-out 5.5s forwards;
-}
-
-/* Efekt loop - płynne przejście do początku */
-@keyframes fadeToBlack {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
-}
-
-.fade-to-restart {
-    animation: fadeToBlack 2s ease-out forwards;
-}
-
     </style>
 </head>
 <body>
@@ -1199,22 +1047,21 @@
         <!-- SLAJD 31: Nowe Kierownictwo, Nowe Inwestycje -->
         <div class="slide notebook-bg" data-duration="10000">
             <div class="slide-content">
-                <h2 class="anim-typewriter" style="margin-bottom: 50px; color: #16a085; font-size: 3rem;">ROZDZIAŁ IV: DROGA KU NOWOCZESNOŚCI</h2>
+                <h2 class="anim-typewriter" style="margin-bottom: 50px; color: #2c3e50; font-size: 3rem;">ROZDZIAŁ IV: DROGA KU NOWOCZESNOŚCI</h2>
                 <div style="display: flex; gap: 50px; align-items: center; margin-top: 40px;">
                     <div class="anim-slide-left" style="flex: 1;">
-                        <img src="./assets/IMG_20251029_105847095.jpg" alt="Dzień Kobiet 2012" style="width: 100%; border: 12px solid #fff; box-shadow: 0 15px 50px rgba(0,0,0,0.6);">
-                        <p style="font-size: 1.3rem; text-align: center; margin-top: 15px; color: #7f8c8d; font-style: italic;">Dzień Kobiet 2012 - ciepła atmosfera grona pedagogicznego</p>
+                        <img src="./assets/IMG_20251029_105847095.jpg" alt="Dzień Kobiet 2012" style="width: 100%; border: 12px solid #fff; box-shadow: 0 15px 50px rgba(0,0,0,0.6); border-radius: 10px;">
+                        <p style="font-size: 1.4rem; text-align: center; margin-top: 15px; color: #7f8c8d; font-style: italic;">Dzień Kobiet 2012 - życie szkoły toczy się dalej</p>
                     </div>
                     <div class="anim-slide-right-delay" style="flex: 1; text-align: left;">
-                        <div style="background: linear-gradient(135deg, #16a085 0%, #1abc9c 100%); padding: 45px; border-radius: 15px; box-shadow: 0 15px 50px rgba(0,0,0,0.6);">
-                            <h3 style="color: #fff; font-size: 2.5rem; margin-bottom: 25px;">Nowe Kierownictwo</h3>
+                        <div style="background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); padding: 40px; border-radius: 15px; box-shadow: 0 15px 50px rgba(0,0,0,0.6);">
+                            <h3 style="color: #fff; font-size: 2.5rem; margin-bottom: 30px;">Nowe Kierownictwo</h3>
                             <p style="font-size: 1.7rem; color: #ecf0f1; line-height: 1.9; margin-bottom: 20px;">
                                 Ster szkoły obejmują kolejni dyrektorzy:<br>
-                                <strong style="font-size: 1.9rem; color: #f1c40f;">Karol Andrzejewski</strong> i<br>
-                                <strong style="font-size: 1.9rem; color: #f1c40f;">Justyna Świdzicka</strong>.
+                                <strong style="color: #ffd700;">Karol Andrzejewski</strong> i <strong style="color: #ffd700;">Justyna Świdzicka</strong>.
                             </p>
-                            <p style="font-size: 1.5rem; color: #ecf0f1; line-height: 1.7; margin-top: 25px; border-left: 4px solid #f1c40f; padding-left: 20px;">
-                                To czas termomodernizacji, remontów i dalszego rozwoju w stronę nowoczesności.
+                            <p style="font-size: 1.6rem; color: #bdc3c7; line-height: 1.8;">
+                                To czas <strong>termomodernizacji</strong>, remontów i dalszego rozwoju w stronę nowoczesności.
                             </p>
                         </div>
                     </div>
@@ -1224,12 +1071,12 @@
 
         <!-- SLAJD 32: Spełnione Marzenie - Hala Sportowa 2013 -->
         <div class="slide" data-duration="15000">
-            <img src="./assets/IMG_20251029_110017725.jpg" alt="Otwarcie hali sportowej" class="fullscreen-image anim-scale-up">
-            <div class="text-bar anim-fade-up-delay">
-                <p style="font-size: 2.5rem; color: #fff; margin-bottom: 15px; font-weight: bold; text-shadow: 3px 3px 8px rgba(0,0,0,0.8);">
-                    🏆 Marzec 2013. Otwieramy naszą wizytówkę.
-                </p>
-                <p style="font-size: 1.9rem; color: #f1c40f; margin: 0; text-shadow: 2px 2px 6px rgba(0,0,0,0.8);">
+            <img src="./assets/IMG_20251029_110017725.jpg" alt="Otwarcie Hali Sportowej 2013" class="fullscreen-image anim-scale-up" style="animation: kenBurns 15s ease-in-out infinite;">
+            <div class="slide-overlay" style="background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.1) 100%);"></div>
+            <div class="text-bar" style="background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%); padding: 40px 80px;">
+                <h2 style="color: #fff; font-size: 3rem; margin-bottom: 20px; text-shadow: 3px 3px 6px rgba(0,0,0,0.6);">Spełnione Marzenie</h2>
+                <p style="font-size: 2.2rem; color: #fff; margin: 0; line-height: 1.8; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                    <strong style="color: #ffd700; font-size: 2.5rem;">Marzec 2013.</strong> Otwieramy naszą wizytówkę.<br>
                     Miejsce sportowych triumfów i najważniejszych uroczystości.
                 </p>
             </div>
@@ -1238,19 +1085,19 @@
         <!-- SLAJD 33: Wspólnota Dziś -->
         <div class="slide notebook-bg" data-duration="12000">
             <div class="slide-content">
-                <h2 class="anim-typewriter" style="margin-bottom: 50px; color: #3498db;">Wspólnota Dziś</h2>
-                <div style="display: flex; gap: 35px; align-items: center; justify-content: center; margin-top: 30px;">
-                    <div class="anim-slide-left" style="transform: rotate(-2deg);">
-                        <img src="./assets/IMG_20251029_110024631.jpg" alt="Publiczność w hali 1" style="width: 550px; border: 12px solid #fff; box-shadow: 0 20px 60px rgba(0,0,0,0.6);">
+                <h2 class="anim-typewriter" style="margin-bottom: 50px; color: #e74c3c;">Wspólnota Dziś</h2>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 30px;">
+                    <div class="anim-fade-up">
+                        <img src="./assets/IMG_20251029_110024631.jpg" alt="Publiczność w hali 1" style="width: 100%; height: 400px; object-fit: cover; border: 12px solid #fff; box-shadow: 0 15px 50px rgba(0,0,0,0.6); border-radius: 10px;">
                     </div>
-                    <div class="anim-slide-right-delay" style="transform: rotate(2deg);">
-                        <img src="./assets/IMG_20251029_110030999.jpg" alt="Publiczność w hali 2" style="width: 550px; border: 12px solid #fff; box-shadow: 0 20px 60px rgba(0,0,0,0.6);">
+                    <div class="anim-fade-up-delay">
+                        <img src="./assets/IMG_20251029_110030999.jpg" alt="Publiczność w hali 2" style="width: 100%; height: 400px; object-fit: cover; border: 12px solid #fff; box-shadow: 0 15px 50px rgba(0,0,0,0.6); border-radius: 10px;">
                     </div>
                 </div>
-                <div class="anim-fade-up-delay" style="margin-top: 50px; background: rgba(52, 152, 219, 0.9); padding: 35px 60px; border-radius: 50%; max-width: 800px; margin-left: auto; margin-right: auto; box-shadow: 0 15px 50px rgba(0,0,0,0.5);">
-                    <p style="font-size: 2.1rem; color: #fff; text-align: center; line-height: 1.8; margin: 0; font-weight: 500;">
+                <div class="anim-word-4" style="margin-top: 50px; background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); padding: 35px 70px; border-radius: 50px; box-shadow: 0 15px 50px rgba(0,0,0,0.5); display: inline-block;">
+                    <p style="font-size: 2.3rem; color: #fff; margin: 0; text-align: center; line-height: 1.8; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">
                         Nauczyciele, rodzice, przyjaciele szkoły.<br>
-                        <strong style="font-size: 2.4rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">Zawsze razem podczas ważnych chwil.</strong>
+                        <strong style="font-size: 2.6rem; color: #ffd700;">Zawsze razem podczas ważnych chwil.</strong>
                     </p>
                 </div>
             </div>
@@ -1260,16 +1107,19 @@
         <div class="slide notebook-bg" data-duration="12000">
             <div class="slide-content">
                 <div style="display: flex; gap: 50px; align-items: center;">
-                    <div class="anim-scale-up" style="flex: 1.3;">
-                        <img src="./assets/WhatsApp Image 2025-11-06 at 21.51.14.jpeg" alt="Pochód ze zniczami" style="width: 100%; border: 15px solid #2c3e50; box-shadow: 0 20px 70px rgba(0,0,0,0.7); filter: brightness(0.95) contrast(1.1);">
+                    <div class="anim-slide-right" style="flex: 1; order: 2;">
+                        <img src="./assets/WhatsApp Image 2025-11-06 at 21.51.14.jpeg" alt="Pochód ze zniczami" style="width: 100%; border: 12px solid #fff; box-shadow: 0 20px 70px rgba(0,0,0,0.7); border-radius: 10px; filter: brightness(0.95) contrast(1.1);">
                     </div>
-                    <div class="anim-fade-up-delay" style="flex: 0.7; text-align: left;">
-                        <h2 style="font-size: 2.8rem; color: #c0392b; margin-bottom: 30px; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);">Wychowanie<br>przez Pamięć</h2>
-                        <p style="font-size: 1.8rem; color: #2c3e50; line-height: 1.9; text-shadow: 1px 1px 2px rgba(255,255,255,0.8);">
-                            Uczymy szacunku dla przeszłości i tych, którzy odeszli.<br><br>
-                            To <strong style="color: #e74c3c; font-size: 2rem;">lekcja</strong>, której nie ma w podręcznikach.<br><br>
-                            <span style="font-size: 1.6rem; font-style: italic; color: #7f8c8d;">🕯️ Tradycja, która buduje charaktery.</span>
-                        </p>
+                    <div class="anim-slide-left" style="flex: 1; order: 1; text-align: left;">
+                        <h2 style="color: #2c3e50; font-size: 3rem; margin-bottom: 30px; text-shadow: 2px 2px 4px rgba(255,255,255,0.8);">Wychowanie<br>przez Pamięć</h2>
+                        <div style="background: rgba(52, 73, 94, 0.95); padding: 40px; border-radius: 15px; box-shadow: 0 15px 50px rgba(0,0,0,0.6);">
+                            <p style="font-size: 1.9rem; color: #ecf0f1; line-height: 1.9; margin-bottom: 20px;">
+                                Uczymy <strong style="color: #ffd700;">szacunku dla przeszłości</strong> i tych, którzy odeszli.
+                            </p>
+                            <p style="font-size: 1.7rem; color: #bdc3c7; line-height: 1.8; font-style: italic;">
+                                To lekcja, której nie ma w podręcznikach.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1330,10 +1180,10 @@
             </div>
         </div>
 
-        <!-- SLAJD 37: KIEDYŚ I DZIŚ - Nauczyciele -->
+        <!-- SLAJD 37: Nauczyciele na Przestrzeni Dekad -->
         <div class="slide notebook-bg" data-duration="15000">
             <div class="slide-content">
-                <h2 class="anim-typewriter" style="margin-bottom: 50px; color: #e74c3c; font-size: 3.5rem; text-transform: uppercase;">Kiedyś i Dziś</h2>
+                <h2 class="anim-typewriter" style="margin-bottom: 50px; color: #e74c3c; font-size: 3.5rem; text-transform: uppercase;">Nauczyciele na Przestrzeni Dekad</h2>
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3px; margin-top: 30px; border: 8px solid #2c3e50; box-shadow: 0 25px 90px rgba(0,0,0,0.7);">
                     <div class="anim-slide-left" style="position: relative; height: 500px; overflow: hidden; background: #000;">
                         <img src="./assets/Satara kadra nauczycieli.jpeg" alt="Kadra pedagogiczna lata 70." style="width: 100%; height: 100%; object-fit: cover; filter: sepia(0.3) contrast(1.1);">
@@ -1342,25 +1192,25 @@
                         </div>
                     </div>
                     <div class="anim-slide-right-delay" style="position: relative; height: 500px; overflow: hidden; background: #000;">
-                        <img src="./assets/IMG_20251029_110030999.jpg" alt="Współczesna kadra" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="./assets/IMG_20251029_110030999.jpg" alt="Kadra 2010+" style="width: 100%; height: 100%; object-fit: cover;">
                         <div style="position: absolute; top: 20px; right: 20px; background: rgba(231, 76, 60, 0.95); padding: 15px 30px; border-radius: 10px;">
-                            <p style="font-size: 1.8rem; color: #fff; margin: 0; font-weight: bold; letter-spacing: 2px;">DZIŚ</p>
+                            <p style="font-size: 1.8rem; color: #fff; margin: 0; font-weight: bold; letter-spacing: 2px;">2010+</p>
                         </div>
                     </div>
                 </div>
                 <div class="anim-word-4" style="margin-top: 50px; background: rgba(44, 62, 80, 0.95); padding: 35px 70px; border-radius: 15px; box-shadow: 0 15px 50px rgba(0,0,0,0.6);">
                     <p style="font-size: 2.3rem; color: #fff; text-align: center; line-height: 1.9; margin: 0;">
-                        Zmieniają się twarze i mody,<br>
+                        Zmieniają się dekady i twarze,<br>
                         ale <strong style="color: #ffd700; font-size: 2.6rem;">pasja w oczach pozostaje ta sama</strong>.
                     </p>
                 </div>
             </div>
         </div>
 
-        <!-- SLAJD 38: KIEDYŚ I DZIŚ - Uczniowie -->
+        <!-- SLAJD 38: Kolejne Pokolenia Uczniów -->
         <div class="slide notebook-bg" data-duration="15000">
             <div class="slide-content">
-                <h2 class="anim-typewriter" style="margin-bottom: 50px; color: #3498db; font-size: 3.5rem; text-transform: uppercase;">Uczniowie: Pokolenia</h2>
+                <h2 class="anim-typewriter" style="margin-bottom: 50px; color: #3498db; font-size: 3.5rem; text-transform: uppercase;">Kolejne Pokolenia Uczniów</h2>
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3px; margin-top: 30px; border: 8px solid #2c3e50; box-shadow: 0 25px 90px rgba(0,0,0,0.7);">
                     <div class="anim-slide-left" style="position: relative; height: 500px; overflow: hidden; background: #000;">
                         <img src="./assets/Klasa Vb rok 1971.jpeg" alt="Klasa Vb 1971" style="width: 100%; height: 100%; object-fit: cover; filter: sepia(0.3) contrast(1.1);">
@@ -1369,9 +1219,9 @@
                         </div>
                     </div>
                     <div class="anim-slide-right-delay" style="position: relative; height: 500px; overflow: hidden; background: #000;">
-                        <img src="./assets/WhatsApp Image 2025-11-06 at 21.50.56.jpeg" alt="Współczesna młodzież" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="./assets/WhatsApp Image 2025-11-06 at 21.50.56.jpeg" alt="Młodzież lata 2000." style="width: 100%; height: 100%; object-fit: cover;">
                         <div style="position: absolute; top: 20px; right: 20px; background: rgba(52, 152, 219, 0.95); padding: 15px 30px; border-radius: 10px;">
-                            <p style="font-size: 1.8rem; color: #fff; margin: 0; font-weight: bold; letter-spacing: 2px;">DZIŚ</p>
+                            <p style="font-size: 1.8rem; color: #fff; margin: 0; font-weight: bold; letter-spacing: 2px;">LATA 2000.</p>
                         </div>
                     </div>
                 </div>
@@ -1431,67 +1281,161 @@
             </div>
         </div>
 
-
-        <!-- SLAJD 42: Symbol, na Który Czekamy 🇵🇱 -->
-        <div class="slide" data-duration="18000" id="slide-42">
-            <video class="video-background" autoplay loop muted playsinline id="flagVideo">
+        <!-- SLAJD 41: Symbol, na Który Czekamy -->
+        <div class="slide" data-duration="18000" style="background: #000;">
+            <video autoplay loop muted playsinline style="position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0.7;">
                 <source src="./assets/flaga.mp4" type="video/mp4">
             </video>
-            <div class="slide-overlay" style="background: rgba(0, 0, 0, 0.2); z-index: 1;"></div>
-            <div class="slide-content" style="z-index: 2;">
-                <div id="textStage1" class="text-stage">
-                    <p style="font-size: 2.5rem; color: #fff; text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.9); line-height: 1.8; max-width: 1000px; margin: 0 auto;">
-                        Przez pół wieku to ona była naszym symbolem...
+            <div class="slide-overlay" style="background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.2) 100%);"></div>
+            <div class="slide-content" style="position: relative; z-index: 3;">
+                <div class="anim-fade-up" style="margin-bottom: 80px;">
+                    <h2 style="color: #fff; font-size: 3.5rem; margin-bottom: 30px; text-shadow: 4px 4px 8px rgba(0,0,0,0.8); text-align: center; letter-spacing: 2px;">
+                        Symbol, Który Znamy
+                    </h2>
+                    <p style="font-size: 2.3rem; color: #ecf0f1; line-height: 1.9; text-align: center; text-shadow: 3px 3px 6px rgba(0,0,0,0.9); max-width: 1000px; margin: 0 auto;">
+                        Przez ponad pół wieku <strong style="color: #ffd700; font-size: 2.6rem;">to ona była naszym najważniejszym symbolem</strong>.<br>
+                        Znak przynależności i dumy.
                     </p>
                 </div>
-                <div id="textStage2" class="text-stage" style="margin-top: 50px;">
-                    <p style="font-size: 2.8rem; color: #ffd700; text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.9); line-height: 1.8; font-weight: bold; max-width: 1000px; margin: 0 auto;">
-                        Dziś, z tych samych biało-czerwonych korzeni, wyrasta nasz własny znak.
+                <div class="anim-word-4" style="background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%); padding: 50px 90px; border-radius: 20px; box-shadow: 0 30px 100px rgba(0,0,0,0.9); border: 6px solid #ffd700; max-width: 1100px; margin: 0 auto;">
+                    <p style="font-size: 2.8rem; color: #fff; line-height: 2; margin: 0; text-align: center; text-shadow: 3px 3px 6px rgba(0,0,0,0.6);">
+                        Dziś, z tych samych <span style="color: #fff; font-weight: bold;">biało-czerwonych korzeni</span>,<br>
+                        wyrasta <strong style="color: #ffd700; font-size: 3.2rem;">nasz własny znak</strong>.<br><br>
+                        <span style="font-size: 2.5rem; color: #ffd700;">Symbol, na którego odsłonięcie wszyscy czekamy.</span> 🎖️
                     </p>
                 </div>
             </div>
         </div>
 
-        <!-- SLAJD 43: Podziękowania -->
-        <div class="slide" data-duration="15000">
-            <img src="./assets/IMG_20251029_110030999.jpg" alt="Grono pedagogiczne" class="fullscreen-image" style="filter: blur(15px) brightness(0.5);">
+        <!-- SLAJD 42: Podziękowania -->
+        <div class="slide notebook-bg" data-duration="15000">
             <div class="slide-content">
-                <div class="elegant-box">
-                    <div class="line-by-line">
-                        <p style="font-size: 2.5rem; color: #fff; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); line-height: 1.9; margin-bottom: 20px;">
-                            Dziękujemy wszystkim,
+                <div class="anim-fade-up" style="text-align: center; max-width: 1100px; margin: 0 auto;">
+                    <h2 style="color: #e74c3c; font-size: 4rem; margin-bottom: 50px; text-shadow: 3px 3px 6px rgba(0,0,0,0.3);">Dziękujemy</h2>
+                    <div style="background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); padding: 60px 80px; border-radius: 20px; box-shadow: 0 25px 90px rgba(0,0,0,0.7); border: 8px solid #3498db;">
+                        <p style="font-size: 2.2rem; color: #ecf0f1; line-height: 2; margin-bottom: 40px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                            Dziękujemy <strong style="color: #ffd700; font-size: 2.5rem;">wszystkim</strong>, którzy przez te wszystkie lata<br>
+                            tworzyli i tworzą historię<br>
+                            <strong style="color: #3498db; font-size: 2.8rem;">Zespołu Szkół im. gen. Józefa Bema</strong><br>
+                            w Dębowej Łące.
                         </p>
-                        <p style="font-size: 2.5rem; color: #fff; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); line-height: 1.9; margin-bottom: 20px;">
-                            którzy przez te lata
-                        </p>
-                        <p style="font-size: 2.8rem; color: #ffd700; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); line-height: 1.9; font-weight: bold;">
-                            tworzyli historię Zespołu Szkół im. gen. Józefa Bema.
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 40px;">
+                            <div class="anim-fade-in-1" style="background: rgba(52, 152, 219, 0.2); padding: 25px; border-radius: 15px; border-left: 5px solid #3498db;">
+                                <p style="font-size: 1.9rem; color: #fff; margin: 0;">👨‍🏫 <strong>Nauczycielom</strong></p>
+                            </div>
+                            <div class="anim-fade-in-2" style="background: rgba(46, 204, 113, 0.2); padding: 25px; border-radius: 15px; border-left: 5px solid #2ecc71;">
+                                <p style="font-size: 1.9rem; color: #fff; margin: 0;">👔 <strong>Pracownikom</strong></p>
+                            </div>
+                            <div class="anim-fade-in-3" style="background: rgba(241, 196, 15, 0.2); padding: 25px; border-radius: 15px; border-left: 5px solid #f1c40f;">
+                                <p style="font-size: 1.9rem; color: #fff; margin: 0;">🎓 <strong>Uczniom</strong></p>
+                            </div>
+                            <div class="anim-fade-in-4" style="background: rgba(155, 89, 182, 0.2); padding: 25px; border-radius: 15px; border-left: 5px solid #9b59b6;">
+                                <p style="font-size: 1.9rem; color: #fff; margin: 0;">👨‍👩‍👧‍👦 <strong>Rodzicom</strong></p>
+                            </div>
+                        </div>
+                        <p style="font-size: 2rem; color: #ffd700; margin-top: 40px; font-style: italic; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                            ...i wszystkim <strong>przyjaciołom szkoły</strong>. ❤️
                         </p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- SLAJD 44: Przesłanie na Przyszłość 🌱 -->
-        <div class="slide" data-duration="25000" id="finalSlide">
-            <img src="./assets/WhatsApp Image 2025-11-06 at 21.47.50.jpeg" alt="Sadzenie drzewa" class="fullscreen-image ken-burns" style="filter: brightness(1.1) contrast(1.05);">
-            <div class="slide-overlay" style="background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.6) 100%); z-index: 1;"></div>
-            <div class="slide-content" style="z-index: 2; display: flex; align-items: center; justify-content: center; height: 100%;">
-                <div class="handwritten-quote">
-                    <blockquote>
-                        <span class="handwritten-line">Dajemy Wam korzenie, byście wiedzieli skąd jesteście,</span>
-                        <span class="handwritten-line">i skrzydła, byście mogli</span>
-                        <span class="handwritten-line">latać wysoko.</span>
-                    </blockquote>
-                    <div class="date-stamp">
-                        ~ 10 listopada 2025 ~
+        <!-- SLAJD 43: Przesłanie na Przyszłość -->
+        <div class="slide" data-duration="15000">
+            <img src="./assets/WhatsApp Image 2025-11-06 at 21.47.50.jpeg" alt="Sadzenie drzewka - symbol przyszłości" class="fullscreen-image" style="filter: brightness(1.1) saturate(1.2);">
+            <div class="slide-overlay" style="background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0.1) 100%);"></div>
+            <div class="slide-content" style="position: relative; z-index: 3;">
+                <div class="anim-scale-up" style="text-align: center; margin-top: 200px;">
+                    <div style="background: rgba(44, 62, 80, 0.95); padding: 70px 100px; border-radius: 25px; box-shadow: 0 30px 120px rgba(0,0,0,0.9); border: 8px solid #27ae60; max-width: 1200px; margin: 0 auto;">
+                        <p style="font-size: 3.5rem; color: #ffd700; margin-bottom: 40px; font-style: italic; line-height: 1.6; text-shadow: 3px 3px 6px rgba(0,0,0,0.7);">
+                            "Dajemy Wam <strong style="color: #27ae60;">korzenie</strong>,<br>
+                            byście wiedzieli skąd jesteście,<br><br>
+                            i <strong style="color: #3498db;">skrzydła</strong>,<br>
+                            byście mogli latać wysoko."
+                        </p>
+                        <div style="border-top: 3px solid #27ae60; padding-top: 30px; margin-top: 30px;">
+                            <p style="font-size: 1.9rem; color: #ecf0f1; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
+                                <strong style="color: #fff; font-size: 2.2rem;">60 lat w służbie edukacji</strong><br>
+                                <span style="color: #ffd700;">1965 - 2025</span>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- SLAJD 44: Egzaminy? Żaden Stres! -->
+        <div class="slide notebook-bg" data-duration="12000">
+            <div class="slide-content">
+                <h2 class="anim-typewriter" style="margin-bottom: 40px; color: #f39c12; font-size: 3rem;">A na koniec... trochę humoru! 😄</h2>
+                <div class="anim-scale-up" style="margin-top: 30px;">
+                    <img src="./assets/WhatsApp Image 2025-11-06 at 21.50.57 (2).jpeg" alt="Egzamin - stres czy okazja do pozowania?" style="width: 100%; max-width: 1000px; border: 15px solid #fff; box-shadow: 0 25px 90px rgba(0,0,0,0.7); border-radius: 10px; margin: 0 auto; display: block;">
+                </div>
+                <div class="anim-word-4" style="margin-top: 50px; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); padding: 40px 70px; border-radius: 20px; box-shadow: 0 20px 80px rgba(0,0,0,0.7); transform: rotate(-1deg); max-width: 900px; margin-left: auto; margin-right: auto;">
+                    <h3 style="color: #fff; font-size: 2.8rem; margin-bottom: 20px; text-align: center; text-shadow: 3px 3px 6px rgba(0,0,0,0.5);">
+                        Egzaminy: dla jednych stres...
+                    </h3>
+                    <p style="font-size: 2.3rem; color: #fff; text-align: center; line-height: 1.8; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                        ...dla innych <strong style="color: #2c3e50; font-size: 2.6rem;">okazja do zaprezentowania formy!</strong> 💪😎
+                    </p>
+                    <p style="font-size: 1.7rem; color: #2c3e50; margin-top: 25px; text-align: center; font-style: italic;">
+                        (Bo szkoła to też poczucie humoru!)
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLAJD 45: Fundamenty - Cisi Bohaterowie -->
+        <div class="slide notebook-bg" data-duration="12000">
+            <div class="slide-content">
+                <h2 class="anim-typewriter" style="margin-bottom: 50px; color: #27ae60; font-size: 3rem;">Fundamenty Naszej Szkoły</h2>
+                <div style="display: flex; gap: 50px; align-items: center;">
+                    <div class="anim-slide-left" style="flex: 1;">
+                        <img src="./assets/WhatsApp Image 2025-11-06 at 21.47.51 (2).jpeg" alt="Pracownik szkoły przy pracy" style="width: 100%; border: 12px solid #fff; box-shadow: 0 20px 70px rgba(0,0,0,0.7); border-radius: 10px;">
+                    </div>
+                    <div class="anim-fade-up-delay" style="flex: 1; text-align: left;">
+                        <div style="background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%); padding: 50px; border-radius: 20px; box-shadow: 0 20px 80px rgba(0,0,0,0.7); border-left: 8px solid #ffd700;">
+                            <h3 style="color: #fff; font-size: 2.8rem; margin-bottom: 30px; text-shadow: 3px 3px 6px rgba(0,0,0,0.4);">Cisi Bohaterowie</h3>
+                            <p style="font-size: 2rem; color: #fff; line-height: 1.9; margin-bottom: 25px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">
+                                To hołd dla <strong style="font-size: 2.3rem; color: #ffd700;">wszystkich pracowników</strong><br>
+                                administracji i obsługi.
+                            </p>
+                            <p style="font-size: 1.8rem; color: #ecf0f1; line-height: 1.8; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">
+                                Ich codzienna, <strong>cicha praca</strong><br>
+                                to fundament, na którym<br>
+                                stoi nasza szkoła. 🏫
+                            </p>
+                            <p style="font-size: 1.7rem; color: #ffd700; margin-top: 30px; font-style: italic; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                                Dziękujemy za każdy dzień!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
+
+    <!-- SYSTEM AUDIO (Opcjonalny - wszystkie pliki mogą być nieobecne) -->
+    <audio id="audio1" loop preload="auto">
+        <source src="./assets/music/tiersen-comptine.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="audio2" loop preload="auto">
+        <source src="./assets/music/preisner-decalogue.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="audio3" loop preload="auto">
+        <source src="./assets/music/korzeniowski-satin.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="audio4" loop preload="auto">
+        <source src="./assets/music/einaudi-nuvole.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="audio5" loop preload="auto">
+        <source src="./assets/music/zimmer-time.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="audio6" loop preload="auto">
+        <source src="./assets/music/richter-nature.mp3" type="audio/mpeg">
+    </audio>
 
     <!-- Nawigacja -->
     <button class="nav-button nav-prev" onclick="changeSlide(-1)">‹</button>
@@ -1501,6 +1445,8 @@
     <div class="controls">
         <button class="control-button" onclick="toggleAutoPlay()">⏸ Pause</button>
         <button class="control-button" onclick="restartPresentation()">↻ Od początku</button>
+        <button class="control-button" id="muteButton" onclick="toggleMute()">🔊 Dźwięk</button>
+        <input type="range" id="volumeSlider" min="0" max="100" value="70" style="width: 100px; margin-left: 10px;" oninput="changeVolume(this.value)">
     </div>
 
     <script>
@@ -1655,86 +1601,6 @@
                 clearTimeout(hideControlsTimeout);
             });
         });
-
-
-        // ========== LOGIKA DLA SLAJDÓW 42-44 ==========
-        
-        // Sekwencja tekstowa dla Slajdu 42
-        let stage42Executed = false;
-        
-        function handleSlide42Sequence() {
-            if (currentSlide === findSlideIndex('slide-42') && !stage42Executed) {
-                stage42Executed = true;
-                const video = document.getElementById('flagVideo');
-                const textStage1 = document.getElementById('textStage1');
-                const textStage2 = document.getElementById('textStage2');
-                
-                // Restart wideo
-                video.currentTime = 0;
-                video.play();
-                
-                // Etap 1: Pojawienie się pierwszego tekstu
-                setTimeout(() => {
-                    textStage1.classList.add('show');
-                }, 500);
-                
-                // Etap 2: Po 5s ukryj pierwszy tekst, rozmyj wideo, pokaż drugi tekst
-                setTimeout(() => {
-                    textStage1.classList.remove('show');
-                    textStage1.classList.add('hide');
-                    video.classList.add('video-blur');
-                }, 5500);
-                
-                setTimeout(() => {
-                    textStage2.classList.add('show');
-                }, 7000);
-                
-                // Reset po zakończeniu slajdu
-                setTimeout(() => {
-                    stage42Executed = false;
-                    textStage1.classList.remove('show', 'hide');
-                    textStage2.classList.remove('show', 'hide');
-                    video.classList.remove('video-blur');
-                }, 18000);
-            }
-        }
-        
-        // Helper: znajdź indeks slajdu po ID
-        function findSlideIndex(slideId) {
-            for (let i = 0; i < slides.length; i++) {
-                if (slides[i].id === slideId) {
-                    return i;
-                }
-            }
-            return -1;
-        }
-        
-        // Modyfikacja funkcji showSlide - dodaj wywołanie sekwencji
-        const originalShowSlide = showSlide;
-        showSlide = function(index) {
-            originalShowSlide(index);
-            
-            // Sprawdź czy to slajd 42
-            if (slides[currentSlide].id === 'slide-42') {
-                handleSlide42Sequence();
-            }
-            
-            // Sprawdź czy to ostatni slajd (44) - po zakończeniu fade do początku
-            if (slides[currentSlide].id === 'finalSlide') {
-                setTimeout(() => {
-                    slides[currentSlide].classList.add('fade-to-restart');
-                    setTimeout(() => {
-                        slides[currentSlide].classList.remove('fade-to-restart');
-                        showSlide(0); // Restart od początku
-                    }, 2000);
-                }, 23000); // 23s + 2s fade = 25s (data-duration)
-            }
-        };
-        
-        // Aktualizacja totalSlides po dodaniu nowych slajdów
-        const updatedTotalSlides = document.querySelectorAll('.slide').length;
-        console.log('Całkowita liczba slajdów:', updatedTotalSlides);
-
 
         // Start przy załadowaniu
         window.addEventListener('load', init);
