@@ -305,12 +305,27 @@
 
         /* Animacje dla slajdu POŻAR */
         .slide.active .fire-typewriter-text {
-            animation: fadeIn 0.5s ease-out forwards, fadeOutFire 1s ease-out 5s forwards;
+            animation: fadeOutFire 1s ease-out 5.5s forwards;
+        }
+
+        .slide.active .fire-date-typewriter {
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: .15em solid #e74c3c;
+            animation:
+                typing 3s steps(35, end) forwards,
+                blink-caret .75s step-end 6;
+        }
+
+        .slide.active .fire-details {
+            opacity: 0;
+            animation: fadeIn 1s ease-out 3.2s forwards;
         }
 
         .slide.active .fire-photo-delayed {
             opacity: 0;
-            animation: fadeInPhoto 2s ease-out 5s forwards;
+            animation: fadeInPhoto 2s ease-out 6s forwards;
         }
 
         @keyframes fadeOutFire {
@@ -802,11 +817,12 @@
         </div>
 
         <!-- ROZDZIAŁ II: Separator -->
-        <div class="slide" data-duration="5000" style="background: linear-gradient(135deg, #1a1a1a 0%, #3a1a1a 100%);">
+        <div class="slide" data-duration="5000" style="background: linear-gradient(135deg, #1a1a1a 0%, #4a3a2a 100%);">
             <div class="slide-content">
                 <h1 class="anim-scale-up" style="font-size: 3.5rem; letter-spacing: 0.2em;">ROZDZIAŁ II</h1>
                 <h2 class="anim-fade-in-1" style="margin-top: 30px; font-size: 2.2rem;">Lata Próby i Ukrytej Siły</h2>
                 <p class="anim-fade-in-2" style="font-size: 1.6rem; margin-top: 20px;">1980 - 1995</p>
+                <p class="anim-fade-in-3" style="font-size: 1.4rem; margin-top: 10px; font-style: italic; color: #bdc3c7;">W trudnych czasach, siła ducha</p>
             </div>
         </div>
 
@@ -984,11 +1000,10 @@
                 <h2 class="anim-typewriter" style="margin-bottom: 50px; color: #2c3e50;">Ku Cyfrowej Przyszłości</h2>
                 <div style="display: flex; gap: 50px; align-items: center; margin-top: 40px;">
                     <div class="anim-slide-left" style="flex: 1; max-width: 700px;">
-                        <img src="./assets/IMG_20251029_105935485.jpg" alt="Kadra pedagogiczna lat 90." style="width: 100%; border: 12px solid #fff; box-shadow: 0 15px 50px rgba(0,0,0,0.6); border-radius: 10px;">
+                        <img src="./assets/crt.png" alt="Monitor CRT - symbol ery cyfrowej" style="width: 100%; max-width: 600px; margin: 0 auto; display: block; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.5));">
                     </div>
                     <div class="anim-slide-right" style="flex: 1;">
                         <div style="background: rgba(52, 73, 94, 0.95); padding: 40px; border-radius: 15px; box-shadow: 0 15px 50px rgba(0,0,0,0.6); position: relative;">
-                            <img src="./assets/crt.png" alt="Monitor CRT" style="width: 180px; margin: 0 auto 30px; display: block; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.4));">
                             <h3 style="color: #ecf0f1; font-size: 2.2rem; margin-bottom: 20px; text-align: left;">Wkraczamy w Erę Cyfrową</h3>
                             <p style="font-size: 1.6rem; color: #ecf0f1; line-height: 1.8; text-align: left;">
                                 Pod kierownictwem dyrektora <strong style="color: #3498db;">Macieja Woźniaka</strong> wkroczyliśmy w cyfrową erę.
@@ -1053,13 +1068,13 @@
         <div class="slide" data-duration="17000" style="background: #000;">
             <div class="slide-content" style="display: flex; align-items: center; justify-content: center; height: 100vh; position: relative;">
 
-                <!-- FAZA 1: Typewriter z informacją (0-5s, znika po 5s) -->
+                <!-- FAZA 1: Typewriter z informacją (0-6s, znika po 6s) -->
                 <div class="fire-typewriter-text" style="position: absolute; width: 80%; max-width: 900px; z-index: 10;">
                     <div style="background: rgba(0, 0, 0, 0.9); padding: 40px 60px; border-radius: 15px; border-left: 8px solid #e74c3c; box-shadow: 0 20px 80px rgba(0,0,0,0.95);">
                         <p style="font-size: 2.2rem; color: #fff; font-family: 'Courier New', monospace; line-height: 1.8; margin: 0;">
-                            <strong style="color: #e74c3c; font-size: 2.5rem;">26 maja 2002, godz. 22:25</strong>
+                            <strong class="fire-date-typewriter" style="color: #e74c3c; font-size: 2.5rem;">26 maja 2002, godz. 22:25</strong>
                         </p>
-                        <p style="font-size: 1.8rem; color: #ecf0f1; font-family: 'Courier New', monospace; line-height: 1.8; margin-top: 20px;">
+                        <p class="fire-details" style="font-size: 1.8rem; color: #ecf0f1; font-family: 'Courier New', monospace; line-height: 1.8; margin-top: 20px;">
                             Około 5.00 w sobotę wybuchł pożar w gimnazjum.<br>
                             Ogień strawił pracownię chemiczno-geograficzną na piętrze.<br>
                             Temperatura była tak wysoka, że odpadły tynki, runęła część stropu.
@@ -1112,6 +1127,16 @@
                         Ale duch młodzieży nie dał się złamać!
                     </p>
                 </div>
+            </div>
+        </div>
+
+        <!-- SEPARATOR: ROZDZIAŁ IV - ROZWÓJ I NOWOCZESNOŚĆ -->
+        <div class="slide" data-duration="5000" style="background: linear-gradient(135deg, #1a1a1a 0%, #27ae60 100%);">
+            <div class="slide-content">
+                <h1 class="anim-scale-up" style="font-size: 3.5rem; letter-spacing: 0.2em;">ROZDZIAŁ IV</h1>
+                <h2 class="anim-fade-in-1" style="margin-top: 30px; font-size: 2.2rem;">Rozwój i Nowoczesność</h2>
+                <p class="anim-fade-in-2" style="font-size: 1.6rem; margin-top: 20px;">2002 - 2013</p>
+                <p class="anim-fade-in-3" style="font-size: 1.4rem; margin-top: 10px; font-style: italic; color: #bdc3c7;">Odrodzeni i silniejsi niż kiedykolwiek</p>
             </div>
         </div>
 
@@ -1243,16 +1268,6 @@
                         ale nastroje były <strong style="color: #2c3e50; font-size: 2.4rem;">bojowe</strong>! 💪
                     </p>
                 </div>
-            </div>
-        </div>
-
-        <!-- SEPARATOR: ROZDZIAŁ IV - ROZWÓJ I NOWOCZESNOŚĆ -->
-        <div class="slide" data-duration="5000" style="background: linear-gradient(135deg, #1a1a1a 0%, #27ae60 100%);">
-            <div class="slide-content">
-                <h1 class="anim-scale-up" style="font-size: 3.5rem; letter-spacing: 0.2em;">ROZDZIAŁ IV</h1>
-                <h2 class="anim-fade-in-1" style="margin-top: 30px; font-size: 2.2rem;">Rozwój i Nowoczesność</h2>
-                <p class="anim-fade-in-2" style="font-size: 1.6rem; margin-top: 20px;">2002 - 2013</p>
-                <p class="anim-fade-in-3" style="font-size: 1.4rem; margin-top: 10px; font-style: italic; color: #bdc3c7;">Odrodzeni i silniejsi niż kiedykolwiek</p>
             </div>
         </div>
 
@@ -1718,24 +1733,35 @@
         // SLIDE → AUDIO MAPPING (Updated for v3 - 52 slides)
         // ==========================================
         const slideAudioMap = {
-            0:  { track: 'tiersen' },           // Index 0: Tytułowy
-            12: { track: 'arnalds-near-light' }, // Index 12: Trudne Czasy (Rozdział II)
+            0:  { track: 'tiersen' },           // Index 0: Tytułowy (Slajd 1)
 
-            // TODO: Add optimistic track for Chapter III (Index 21-24)
-            // 21: { track: 'optimistic' },      // Index 21: Nowy Gospodarz (Chapter III start)
+            // ROZDZIAŁ II (1980-1995)
+            12: { track: 'arnalds-near-light' }, // Index 12: Trudne Czasy (Slajd 11, Rozdział II)
 
-            // FIRE SECTION
-            25: { track: 'korzeniowski' },      // Index 25: Pożar 2002 (FIRE)
-
-            // SILENCE + RESURRECTION
-            29: {
-                track: 'einaudi',                // Index 29: Wstaliśmy z Popiołów
-                silenceBefore: 2000,
-                volumeAdjust: 0.4
+            // FADE OUT before Chapter III separator
+            20: {
+                track: null,                     // Index 20: Separator III (fade out Arnalds)
+                fadeOut: true
             },
 
-            43: { track: 'zimmer' },            // Index 43: Szkoła Otwarta na Świat
-            49: { track: 'richter' }            // Index 49: Dziękujemy (Podziękowania)
+            // ROZDZIAŁ III (1996-2002) - OPTIMISTIC START
+            21: {
+                track: 'einaudi',                // Index 21: Nowy Gospodarz (Slajd 19, Rozdział III)
+                volumeAdjust: 0.5                // Lekki, optymistyczny początek
+            },
+
+            // FIRE SECTION
+            25: { track: 'korzeniowski' },      // Index 25: POŻAR 2002 (Slajd 23)
+
+            // SILENCE + RESURRECTION (Rozdział IV)
+            28: {
+                track: 'einaudi',                // Index 28: Wstaliśmy z Popiołów (Slajd 27, Rozdział IV)
+                silenceBefore: 2000,
+                volumeAdjust: 0.6
+            },
+
+            44: { track: 'zimmer' },            // Index 44: Szkoła Otwarta na Świat (przesunięte +1)
+            50: { track: 'richter' }            // Index 50: Dziękujemy (przesunięte +1)
         };
 
         // ==========================================
