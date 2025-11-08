@@ -303,6 +303,32 @@
             animation: scaleUp 1.5s ease-out 0.5s both;
         }
 
+        /* Animacje dla slajdu POŻAR */
+        .slide.active .fire-typewriter-text {
+            animation: fadeIn 0.5s ease-out forwards, fadeOutFire 1s ease-out 5s forwards;
+        }
+
+        .slide.active .fire-photo-delayed {
+            opacity: 0;
+            animation: fadeInPhoto 2s ease-out 5s forwards;
+        }
+
+        @keyframes fadeOutFire {
+            from { opacity: 1; }
+            to { opacity: 0; visibility: hidden; }
+        }
+
+        @keyframes fadeInPhoto {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
         .photo-pin {
             display: inline-block;
         }
@@ -619,7 +645,7 @@
     </div>
 
     <div class="progress-bar" id="progressBar"></div>
-    <div class="slide-number" id="slideNumber">1 / 48</div>
+    <div class="slide-number" id="slideNumber">1 / 52</div>
 
     <div class="presentation">
         <!-- SLAJD 1: Tytułowy -->
@@ -698,10 +724,10 @@
             <div class="slide-content">
                 <h2>Nauka w Czasach PRL</h2>
                 <div style="display: flex; gap: 40px; margin-top: 50px; justify-content: center;">
-                    <div class="anim-fade-up" style="flex: 1; max-width: 750px;">
+                    <div class="anim-fade-up" style="flex: 1; max-width: 1125px;">
                         <img src="./assets/WhatsApp Image 2025-10-10 at 09.00.23.jpeg" alt="Sala z transparentem IDEE LENINA" style="width: 100%; border: 8px solid #fff; box-shadow: 0 10px 40px rgba(0,0,0,0.5); transform: rotate(-2deg);">
                     </div>
-                    <div class="anim-fade-up-delay" style="flex: 1; max-width: 750px;">
+                    <div class="anim-fade-up-delay" style="flex: 1; max-width: 1125px;">
                         <img src="./assets/IMG_20251027_130457715.jpg" alt="Sala z V ZJAZD PARTII" style="width: 100%; border: 8px solid #fff; box-shadow: 0 10px 40px rgba(0,0,0,0.5); transform: rotate(2deg);">
                     </div>
                 </div>
@@ -712,7 +738,7 @@
         <!-- SLAJD 7: Moda na Korytarzach -->
         <div class="slide notebook-bg" data-duration="10000">
             <div class="slide-content">
-                <div class="anim-scale-up" style="max-width: 1100px; margin: 0 auto;">
+                <div class="anim-scale-up" style="max-width: 1650px; margin: 0 auto;">
                     <img src="./assets/WhatsApp Image 2025-10-28 at 09.17.11 (3).jpeg" alt="Nauczyciel z uczennicami - moda lat 70" style="width: 100%; border: 12px solid #fff; box-shadow: 0 15px 50px rgba(0,0,0,0.6);">
                 </div>
                 <div class="anim-fade-up-delay" style="margin-top: 40px; background: rgba(255,255,255,0.9); padding: 30px; border-radius: 20px; display: inline-block;">
@@ -727,10 +753,10 @@
             <div class="slide-content">
                 <h2>Entuzjazm, Który Niósł</h2>
                 <div style="display: flex; gap: 30px; margin-top: 40px; align-items: center; justify-content: center;">
-                    <div class="anim-slide-left" style="flex: 1.2; max-width: 800px;">
+                    <div class="anim-slide-left" style="flex: 1.2; max-width: 1200px;">
                         <img src="./assets/IMG_20251027_130507557.jpg" alt="Uczniowie na obozie" style="width: 100%; border: 10px solid #fff; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
                     </div>
-                    <div class="anim-fade-up-delay" style="flex: 1; max-width: 700px;">
+                    <div class="anim-fade-up-delay" style="flex: 1; max-width: 1050px;">
                         <img src="./assets/IMG_20251027_130510799.jpg" alt="Nauczyciele na obozie" style="width: 100%; border: 10px solid #fff; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
                     </div>
                 </div>
@@ -764,10 +790,10 @@
             <div class="slide-content">
                 <h2 style="margin-bottom: 40px;">Grono Pedagogiczne lat 70.</h2>
                 <div style="display: flex; gap: 30px; justify-content: center;">
-                    <div class="ken-burns" style="flex: 1; max-width: 750px;">
+                    <div class="ken-burns" style="flex: 1; max-width: 1125px;">
                         <img src="./assets/IMG_20251029_110155567.jpg" alt="Uroczystość kadry 1" style="width: 100%; border: 10px solid #fff; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
                     </div>
-                    <div class="ken-burns" style="flex: 1; max-width: 750px;">
+                    <div class="ken-burns" style="flex: 1; max-width: 1125px;">
                         <img src="./assets/IMG_20251029_110204968.jpg" alt="Uroczystość kadry 2" style="width: 100%; border: 10px solid #fff; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
                     </div>
                 </div>
@@ -859,7 +885,7 @@
         <!-- SLAJD 16: Magia Świąt -->
         <div class="slide notebook-bg" data-duration="10000">
             <div class="slide-content">
-                <div class="anim-scale-up" style="max-width: 850px; margin: 0 auto;">
+                <div class="anim-scale-up" style="max-width: 1275px; margin: 0 auto;">
                     <img src="./assets/IMG_20251027_130547406.jpg" alt="Choinka 1989" style="width: 100%; border: 12px solid #fff; box-shadow: 0 15px 50px rgba(0,0,0,0.6); filter: brightness(1.1);">
                 </div>
                 <div class="anim-fade-up-delay" style="margin-top: 40px; background: rgba(194, 30, 58, 0.9); padding: 30px; border-radius: 20px; display: inline-block;">
@@ -892,8 +918,8 @@
             <div class="slide-content">
                 <h2 style="margin-bottom: 50px;">Ostatni Dzwonek dla Ósmych Klas</h2>
                 <div style="display: flex; gap: 40px; justify-content: center;">
-                    <img src="./assets/IMG_20251027_130558448.jpg" alt="Zakończenie 1991" class="anim-fade-up" style="max-width: 600px; border: 10px solid #fff; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
-                    <img src="./assets/IMG_20251029_105922622.jpg" alt="Zakończenie lata 80/90" class="anim-fade-up-delay" style="max-width: 600px; border: 10px solid #fff; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+                    <img src="./assets/IMG_20251027_130558448.jpg" alt="Zakończenie 1991" class="anim-fade-up" style="max-width: 900px; border: 10px solid #fff; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+                    <img src="./assets/IMG_20251029_105922622.jpg" alt="Zakończenie lata 80/90" class="anim-fade-up-delay" style="max-width: 900px; border: 10px solid #fff; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
                 </div>
                 <div style="margin-top: 50px;">
                     <p class="anim-word-1" style="font-size: 2.5rem; color: #ffd700;">Radość...</p>
@@ -1026,16 +1052,26 @@
         </div>
 
         <!-- SLAJD 23: Noc, Która Wstrzymała Oddech -->
-        <div class="slide" data-duration="15000" style="background-image: url('./assets/popiol.png'); background-size: cover; background-position: center;">
-            <div class="slide-overlay" style="background: rgba(0, 0, 0, 0.6);"></div>
-            <div class="slide-content">
-                <div class="anim-scale-up" style="width: 100%; max-width: 900px; margin: 0 auto;">
-                    <img src="./assets/WhatsApp Image 2025-11-06 at 21.47.49.jpeg" alt="Spalona fasada szkoły" class="anim-fade-up" style="width: 100%; border: 15px solid #000; box-shadow: 0 20px 80px rgba(0,0,0,0.9);">
+        <div class="slide" data-duration="17000" style="background: #000;">
+            <div class="slide-content" style="display: flex; align-items: center; justify-content: center; height: 100vh; position: relative;">
+
+                <!-- FAZA 1: Typewriter z informacją (0-5s, znika po 5s) -->
+                <div class="fire-typewriter-text" style="position: absolute; width: 80%; max-width: 900px; z-index: 10;">
+                    <div style="background: rgba(0, 0, 0, 0.9); padding: 40px 60px; border-radius: 15px; border-left: 8px solid #e74c3c; box-shadow: 0 20px 80px rgba(0,0,0,0.95);">
+                        <p style="font-size: 2.2rem; color: #fff; font-family: 'Courier New', monospace; line-height: 1.8; margin: 0;">
+                            <strong style="color: #e74c3c; font-size: 2.5rem;">26 maja 2002, godz. 22:25</strong>
+                        </p>
+                        <p style="font-size: 1.8rem; color: #ecf0f1; font-family: 'Courier New', monospace; line-height: 1.8; margin-top: 20px;">
+                            Około 5.00 w sobotę wybuchł pożar w gimnazjum.<br>
+                            Ogień strawił pracownię chemiczno-geograficzną na piętrze.<br>
+                            Temperatura była tak wysoka, że odpadły tynki, runęła część stropu.
+                        </p>
+                    </div>
                 </div>
-                <div class="anim-fade-up-delay" style="margin-top: 40px; background: rgba(0, 0, 0, 0.85); padding: 25px 60px; border-radius: 10px; box-shadow: 0 10px 40px rgba(0,0,0,0.8);">
-                    <p style="font-size: 2rem; color: #fff; margin: 0; text-align: center; letter-spacing: 2px;">
-                        <strong style="color: #e74c3c;">26 maja 2002.</strong> Noc, która na zawsze zmieniła naszą historię.
-                    </p>
+
+                <!-- FAZA 2: Zdjęcie (pojawia się po 5s) -->
+                <div class="fire-photo-delayed" style="width: 100%; max-width: 900px; margin: 0 auto;">
+                    <img src="./assets/WhatsApp Image 2025-11-06 at 21.47.49.jpeg" alt="Spalona fasada szkoły" style="width: 100%; border: 15px solid #000; box-shadow: 0 20px 80px rgba(0,0,0,0.9);">
                 </div>
             </div>
         </div>
@@ -1101,7 +1137,7 @@
         <!-- SLAJD 27: Sport Łączy Pokolenia -->
         <div class="slide notebook-bg" data-duration="14000">
             <div class="slide-content">
-                <h2 class="anim-typewriter" style="margin-bottom: 50px; color: #e74c3c;">Sport Łączy i Buduje Charakter</h2>
+                <h2 class="anim-typewriter" style="margin-bottom: 50px; color: #e74c3c;">W budowaniu nowej siły pomógł sport</h2>
                 <div style="display: flex; gap: 40px; align-items: center; justify-content: center; margin-top: 30px;">
                     <div class="anim-slide-left" style="flex: 1; max-width: 650px;">
                         <img src="./assets/WhatsApp Image 2025-11-06 at 21.50.58.jpeg" alt="Memoriał A. Jaroszewskiego 2005" style="width: 100%; border: 12px solid #fff; box-shadow: 0 15px 50px rgba(0,0,0,0.6); transform: rotate(-2deg);">
@@ -1128,7 +1164,7 @@
                         <img src="./assets/WhatsApp Image 2025-11-06 at 21.47.51 (3).jpeg" alt="Zajęcia plastyczne" style="width: 100%; border: 12px solid #fff; box-shadow: 0 15px 50px rgba(0,0,0,0.6);">
                     </div>
                     <div class="anim-fade-up-delay" style="flex: 0.8; text-align: left;">
-                        <h2 style="font-family: 'Brush Script MT', cursive; font-size: 3rem; color: #9b59b6; margin-bottom: 30px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">Kreatywność<br>w Szkolnej Ławce</h2>
+                        <h2 style="font-family: 'Brush Script MT', cursive; font-size: 3rem; color: #9b59b6; margin-bottom: 30px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">W rozwoju<br>ważna była kreatywność</h2>
                         <p style="font-size: 1.7rem; color: #2c3e50; line-height: 1.8; text-shadow: 1px 1px 2px rgba(255,255,255,0.8);">
                             Ale szkoła to nie tylko wielka scena.<br><br>
                             To także <strong style="color: #e74c3c;">ciche skupienie</strong>, zapach farby i radość tworzenia,<br>
@@ -1142,7 +1178,7 @@
         <!-- SLAJD 29: Scena dla Nowych Talentów -->
         <div class="slide notebook-bg" data-duration="14000">
             <div class="slide-content">
-                <h2 class="anim-typewriter" style="margin-bottom: 50px; color: #f39c12; font-size: 3rem;">Scena dla Nowych Talentów</h2>
+                <h2 class="anim-typewriter" style="margin-bottom: 50px; color: #f39c12; font-size: 3rem;">Rozkwitały Różne Nowe Talenty</h2>
                 <div style="display: flex; gap: 30px; align-items: center; justify-content: center; flex-wrap: wrap;">
                     <div class="anim-drop-1" style="transform: rotate(-5deg);">
                         <img src="./assets/WhatsApp Image 2025-11-06 at 21.51.18.jpeg" alt="Rycerz na scenie" style="width: 350px; height: 350px; object-fit: cover; border: 10px solid #fff; box-shadow: 0 15px 50px rgba(0,0,0,0.7);">
@@ -1183,13 +1219,13 @@
                 <h2 style="margin-bottom: 50px;">Ale radosne chwile pamięta się najdłużej!</h2>
                 <div style="display: flex; gap: 25px; justify-content: center; align-items: flex-start; flex-wrap: wrap;">
                     <div class="anim-slide-left">
-                        <img src="./assets/IMG_20251029_110123661.jpg" alt="Nauczyciele przy stole 1" style="width: 420px; height: auto; border: 8px solid #fff; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+                        <img src="./assets/IMG_20251029_110123661.jpg" alt="Nauczyciele przy stole 1" style="width: 630px; height: auto; border: 8px solid #fff; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
                     </div>
                     <div class="anim-fade-up-delay">
-                        <img src="./assets/piwo1.png" alt="Nauczyciele przy stole 2" style="width: 420px; height: auto; border: 8px solid #fff; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+                        <img src="./assets/piwo1.png" alt="Nauczyciele przy stole 2" style="width: 630px; height: auto; border: 8px solid #fff; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
                     </div>
                     <div class="anim-slide-right-delay-long">
-                        <img src="./assets/piwo2.jpg" alt="Nauczyciele przy stole 3" style="width: 420px; height: auto; border: 8px solid #fff; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+                        <img src="./assets/piwo2.jpg" alt="Nauczyciele przy stole 3" style="width: 630px; height: auto; border: 8px solid #fff; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
                     </div>
                 </div>
                 <p class="caption" style="margin-top: 40px; font-size: 1.8rem; color: #fff; text-shadow: 2px 2px 6px rgba(0,0,0,0.8);">Bo pokój nauczycielski to nie tylko miejsce pracy. To także przestrzeń przyjaźni i wspólnego śmiechu.</p>
@@ -1232,8 +1268,8 @@
                 <h2 class="anim-typewriter" style="margin-bottom: 50px; color: #2c3e50; font-size: 3rem;">Nowe Kierownictwo</h2>
                 <div style="display: flex; gap: 50px; align-items: center; margin-top: 40px;">
                     <div class="anim-slide-left" style="flex: 1; max-width: 700px;">
-                        <img src="./assets/dzienkobiet.jpg" alt="Dzień Kobiet 2012" style="width: 100%; border: 12px solid #fff; box-shadow: 0 15px 50px rgba(0,0,0,0.6); border-radius: 10px;">
-                        <p style="font-size: 1.4rem; text-align: center; margin-top: 15px; color: #7f8c8d; font-style: italic;">Dzień Kobiet 2012 - życie szkoły toczy się dalej</p>
+                        <img src="./assets/k.andrzejewski_wrecza_nagrode.jpg" alt="Dyrektor wręcza nagrodę" style="width: 100%; border: 12px solid #fff; box-shadow: 0 15px 50px rgba(0,0,0,0.6); border-radius: 10px;">
+                        <p style="font-size: 1.4rem; text-align: center; margin-top: 15px; color: #7f8c8d; font-style: italic;">Dyrektor Krystian Andrzejewski wręcza nagrodę</p>
                     </div>
                     <div class="anim-slide-right-delay" style="flex: 1; text-align: left;">
                         <div style="background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); padding: 40px; border-radius: 15px; box-shadow: 0 15px 50px rgba(0,0,0,0.6);">
@@ -1264,10 +1300,20 @@
             </div>
         </div>
 
-        <!-- SLAJD 33: Wspólnota Dziś -->
+        <!-- SEPARATOR: ROZDZIAŁ V - DZIEDZICTWO -->
+        <div class="slide" data-duration="5000" style="background: linear-gradient(135deg, #1a1a1a 0%, #8e44ad 100%);">
+            <div class="slide-content">
+                <h1 class="anim-scale-up" style="font-size: 3.5rem; letter-spacing: 0.2em;">ROZDZIAŁ V</h1>
+                <h2 class="anim-fade-in-1" style="margin-top: 30px; font-size: 2.2rem;">Dziedzictwo</h2>
+                <p class="anim-fade-in-2" style="font-size: 1.6rem; margin-top: 20px;">2013 - dziś</p>
+                <p class="anim-fade-in-3" style="font-size: 1.4rem; margin-top: 10px; font-style: italic; color: #bdc3c7;">Korzenie i skrzydła</p>
+            </div>
+        </div>
+
+        <!-- SLAJD 34: Wspólnota Dziś -->
         <div class="slide notebook-bg" data-duration="12000">
             <div class="slide-content">
-                <h2 class="anim-typewriter" style="margin-bottom: 50px; color: #e74c3c;">Wspólnota Dziś</h2>
+                <h2 class="anim-typewriter" style="margin-bottom: 50px; color: #e74c3c;">Nasza szkoła to wspólnota</h2>
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 30px;">
                     <div class="anim-fade-up">
                         <img src="./assets/IMG_20251029_110024631.jpg" alt="Publiczność w hali 1" style="width: 100%; height: 500px; object-fit: cover; border: 12px solid #fff; box-shadow: 0 15px 50px rgba(0,0,0,0.6); border-radius: 10px;">
@@ -1293,7 +1339,7 @@
                         <img src="./assets/WhatsApp Image 2025-11-06 at 21.51.14.jpeg" alt="Pochód ze zniczami" style="width: 100%; border: 12px solid #fff; box-shadow: 0 20px 70px rgba(0,0,0,0.7); border-radius: 10px; filter: brightness(0.95) contrast(1.1);">
                     </div>
                     <div class="anim-slide-left" style="flex: 1; order: 1; text-align: left;">
-                        <h2 style="color: #2c3e50; font-size: 3rem; margin-bottom: 30px; text-shadow: 2px 2px 4px rgba(255,255,255,0.8);">Wychowanie<br>przez Pamięć</h2>
+                        <h2 style="color: #2c3e50; font-size: 3rem; margin-bottom: 30px; text-shadow: 2px 2px 4px rgba(255,255,255,0.8);">Wychowuje<br>przez Pamięć</h2>
                         <div style="background: rgba(52, 73, 94, 0.95); padding: 40px; border-radius: 15px; box-shadow: 0 15px 50px rgba(0,0,0,0.6);">
                             <p style="font-size: 1.9rem; color: #ecf0f1; line-height: 1.9; margin-bottom: 20px;">
                                 Uczymy <strong style="color: #ffd700;">szacunku dla przeszłości</strong> i tych, którzy odeszli.
@@ -1310,7 +1356,7 @@
         <!-- SLAJD 35: Nasze Tradycje: Wczoraj i Dziś -->
         <div class="slide notebook-bg" data-duration="12000">
             <div class="slide-content">
-                <h2 class="anim-typewriter" style="margin-bottom: 50px; color: #9b59b6; font-size: 3rem;">Nasze Tradycje: Wczoraj i Dziś</h2>
+                <h2 class="anim-typewriter" style="margin-bottom: 50px; color: #9b59b6; font-size: 3rem;">Kultywuje tradycje</h2>
                 <div style="display: flex; gap: 40px; align-items: center; justify-content: center; margin-top: 30px;">
                     <div class="anim-slide-left" style="flex: 1; text-align: center;">
                         <img src="./assets/WhatsApp Image 2025-11-06 at 21.51.48 (1).jpeg" alt="Kocenie pierwszaków" style="width: 100%; max-width: 500px; border: 12px solid #fff; box-shadow: 0 15px 50px rgba(0,0,0,0.6); border-radius: 10px;">
@@ -1333,7 +1379,7 @@
         <!-- SLAJD 36: Szkoła Otwarta na Świat -->
         <div class="slide notebook-bg" data-duration="12000">
             <div class="slide-content">
-                <h2 class="anim-typewriter" style="margin-bottom: 50px; color: #3498db; font-size: 3rem;">Szkoła Otwarta na Świat 🌍</h2>
+                <h2 class="anim-typewriter" style="margin-bottom: 50px; color: #3498db; font-size: 2.8rem;">Jednocześnie Jest Szkołą Otwartą na Świat 🌍</h2>
                 <div style="display: flex; gap: 50px; align-items: center; margin-top: 30px;">
                     <div class="anim-slide-left" style="flex: 1;">
                         <img src="./assets/skica.jpg" alt="Konkurs językowy" style="width: 100%; border: 12px solid #fff; box-shadow: 0 15px 50px rgba(0,0,0,0.6); border-radius: 10px;">
@@ -1365,7 +1411,7 @@
         <!-- SLAJD 37: Nauczyciele na Przestrzeni Dekad -->
         <div class="slide notebook-bg" data-duration="15000">
             <div class="slide-content">
-                <h2 class="anim-typewriter" style="margin-bottom: 50px; color: #e74c3c; font-size: 3.5rem; text-transform: uppercase;">Nauczyciele na Przestrzeni Dekad</h2>
+                <h2 class="anim-typewriter" style="margin-bottom: 50px; color: #e74c3c; font-size: 3.5rem; text-transform: uppercase;">...I NAUCZYCIELI</h2>
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3px; margin-top: 30px; border: 8px solid #2c3e50; box-shadow: 0 25px 90px rgba(0,0,0,0.7);">
                     <div class="anim-slide-left" style="position: relative; height: 500px; overflow: hidden; background: #000;">
                         <img src="./assets/Satara kadra nauczycieli.jpeg" alt="Kadra pedagogiczna - pierwsi nauczyciele" style="width: 100%; height: 100%; object-fit: cover; filter: sepia(0.3) contrast(1.1);">
@@ -1375,8 +1421,8 @@
                     </div>
                 </div>
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px;">
-                    <p class="anim-fade-in-1" style="font-size: 1.6rem; color: #2c3e50; text-align: center; font-weight: bold; font-style: italic;">PIERWSI NAUCZYCIELE</p>
-                    <p class="anim-fade-in-2" style="font-size: 1.6rem; color: #e74c3c; text-align: center; font-weight: bold; font-style: italic;">DZISIEJSI MISTRZOWIE</p>
+                    <p class="anim-fade-in-1" style="font-size: 1.6rem; color: #2c3e50; text-align: center; font-weight: bold; font-style: italic;">KIEDYŚ...</p>
+                    <p class="anim-fade-in-2" style="font-size: 1.6rem; color: #e74c3c; text-align: center; font-weight: bold; font-style: italic;">...I CAŁKIEM NIEDAWNO</p>
                 </div>
                 <div class="anim-word-4" style="margin-top: 30px; background: rgba(44, 62, 80, 0.95); padding: 35px 70px; border-radius: 15px; box-shadow: 0 15px 50px rgba(0,0,0,0.6);">
                     <p style="font-size: 2.3rem; color: #fff; text-align: center; line-height: 1.9; margin: 0;">
@@ -1445,17 +1491,29 @@
             </div>
         </div>
 
-        <!-- SLAJD 40: Dziś Piszemy Nowy Rozdział -->
-        <div class="slide notebook-bg" data-duration="12000">
+        <!-- SLAJD 40: Wartości, Które Nas Kształtowały -->
+        <div class="slide notebook-bg" data-duration="15000">
             <div class="slide-content">
-                <div class="anim-scale-up" style="width: 100%; max-width: 1000px; margin: 0 auto;">
-                    <img src="./assets/WhatsApp Image 2025-11-06 at 21.47.50 (1).jpeg" alt="Poczet sztandarowy z flagą Polski" style="width: 100%; border: 15px solid #fff; box-shadow: 0 25px 90px rgba(0,0,0,0.7); border-radius: 10px;">
+                <h2 class="anim-typewriter" style="font-size: 3rem; margin-bottom: 40px; text-align: center;">Wartości, Które Nas Kształtowały</h2>
+
+                <!-- Two photos side by side -->
+                <div style="display: flex; gap: 40px; align-items: center; margin-bottom: 50px;">
+                    <div class="anim-slide-left" style="flex: 1;">
+                        <img src="./assets/WhatsApp Image 2025-11-06 at 21.47.50 (1).jpeg" alt="Uczniowie z flagą Polski - 20 lat temu" style="width: 100%; border: 12px solid #fff; box-shadow: 0 15px 60px rgba(0,0,0,0.6); border-radius: 8px;">
+                        <p style="text-align: center; font-size: 1.4rem; margin-top: 15px; font-style: italic; color: #555;">Kiedyś...</p>
+                    </div>
+                    <div class="anim-slide-right" style="flex: 1;">
+                        <img src="./assets/a.zielinska_uczniowie2023.jpg" alt="Dyrektor Agnieszka Zielińska z uczniami - 2023" style="width: 100%; border: 12px solid #fff; box-shadow: 0 15px 60px rgba(0,0,0,0.6); border-radius: 8px;">
+                        <p style="text-align: center; font-size: 1.4rem; margin-top: 15px; font-style: italic; color: #555;">...i dziś</p>
+                    </div>
                 </div>
-                <div class="anim-fade-up-delay" style="margin-top: 50px; background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%); padding: 45px 80px; border-radius: 15px; box-shadow: 0 20px 80px rgba(0,0,0,0.7); border-left: 10px solid #ffd700;">
-                    <h2 style="color: #fff; font-size: 3rem; margin-bottom: 25px; text-shadow: 3px 3px 6px rgba(0,0,0,0.4); text-align: center;">Dziś Piszemy Nowy Rozdział</h2>
-                    <p style="font-size: 2.2rem; color: #fff; line-height: 1.9; margin: 0; text-align: center;">
-                        Przez lata z <strong style="color: #ffd700; font-size: 2.5rem;">dumą nosiliśmy flagę Polski</strong>.<br><br>
-                        Dziś nadszedł czas na <strong style="color: #ffd700; font-size: 2.5rem;">nasz własny, wyjątkowy symbol</strong>.
+
+                <!-- Red gradient text box -->
+                <div class="anim-fade-up-delay" style="background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%); padding: 40px 70px; border-radius: 15px; box-shadow: 0 20px 80px rgba(0,0,0,0.7); border-left: 10px solid #ffd700; max-width: 1100px; margin: 0 auto;">
+                    <p style="font-size: 2rem; color: #fff; line-height: 1.8; margin: 0; text-align: center;">
+                        Przez lata <strong style="color: #ffd700;">patriotyzm wskazywał nam drogę</strong>.<br><br>
+                        Dziś, pod kierownictwem pani dyrektor <strong style="color: #ffd700;">Agnieszki Zielińskiej</strong>,<br>
+                        kontynuujemy tę <strong style="color: #ffd700;">dumną tradycję</strong>.
                     </p>
                 </div>
             </div>
@@ -1663,24 +1721,27 @@
         };
 
         // ==========================================
-        // SLIDE → AUDIO MAPPING
+        // SLIDE → AUDIO MAPPING (Updated for v3 - 52 slides)
         // ==========================================
         const slideAudioMap = {
-            0:  { track: 'tiersen' },           // SLAJD 1: Tytułowy
-            12: { track: 'arnalds-near-light' }, // SLAJD 12: Trudne Czasy (Rozdział II)
+            0:  { track: 'tiersen' },           // Index 0: Tytułowy
+            12: { track: 'arnalds-near-light' }, // Index 12: Trudne Czasy (Rozdział II)
+
+            // TODO: Add optimistic track for Chapter III (Index 21-24)
+            // 21: { track: 'optimistic' },      // Index 21: Nowy Gospodarz (Chapter III start)
 
             // FIRE SECTION
-            23: { track: 'korzeniowski' },      // SLAJD 23: Pożar 2002
+            25: { track: 'korzeniowski' },      // Index 25: Pożar 2002 (FIRE)
 
             // SILENCE + RESURRECTION
-            26: {
-                track: 'einaudi',                // SLAJD 26: Wstaliśmy z Popiołów
+            29: {
+                track: 'einaudi',                // Index 29: Wstaliśmy z Popiołów
                 silenceBefore: 2000,
                 volumeAdjust: 0.4
             },
 
-            39: { track: 'zimmer' },            // SLAJD 39: Szkoła Otwarta na Świat
-            45: { track: 'richter' }            // SLAJD 45: Podziękowania
+            43: { track: 'zimmer' },            // Index 43: Szkoła Otwarta na Świat
+            49: { track: 'richter' }            // Index 49: Dziękujemy (Podziękowania)
         };
 
         // ==========================================
