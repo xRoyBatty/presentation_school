@@ -1,0 +1,67 @@
+600:    <!-- MODE SELECTION SCREEN -->
+602:        <!-- Header -->
+615:        <!-- Mode Cards -->
+618:            <!-- PRESENTATION MODE -->
+636:            <!-- DEBUG MODE -->
+656:        <!-- Footer info -->
+666:                <!-- SLAJD 1: Tytułowy -->
+677:        <!-- SEPARATOR: ROZDZIAŁ I - GENEZA -->
+687:                <!-- SLAJD 2: Dlaczego Tutaj? -->
+696:                <!-- SLAJD 3: Wielki Dzień -->
+705:                <!-- SLAJD 4: Pionierzy -->
+718:                <!-- SLAJD 5: Patron i Przyjaciele -->
+737:                <!-- SLAJD 6: Nauka w Czasach PRL -->
+753:                <!-- SLAJD 7: Moda na Korytarzach -->
+766:                <!-- SLAJD 8: Entuzjazm Harcerski -->
+782:                <!-- SLAJD 9: Odkrywamy Polskę -->
+803:                <!-- SLAJD 10: Grono Pedagogiczne lat 70. -->
+819:        <!-- ROZDZIAŁ II: Separator -->
+829:                <!-- SLAJD 11: Trudne Czasy -->
+846:                <!-- SLAJD 12: Szkoła Tętniąca Życiem -->
+874:                <!-- SLAJD 13: Nasz Mistrz -->
+883:                <!-- SLAJD 14: Jak Mała Szkoła Ogrywała Wielkie Miasta -->
+901:                <!-- SLAJD 15: Magia Świąt -->
+914:                <!-- SLAJD 16: Nauczyciele Czasów Przełomu -->
+930:                <!-- SLAJD 17: Ostatni Dzwonek -->
+947:                <!-- SLAJD 18: Powrót Religii -->
+963:        <!-- SEPARATOR: ROZDZIAŁ III - CYFROWA ERA I PRÓBA OGNIA -->
+973:                <!-- SLAJD 19: Nowy Gospodarz -->
+997:                <!-- SLAJD 20: Ku Cyfrowej Przyszłości -->
+1020:                <!-- SLAJD 21: Jan Bliźniak - Pierwszy Dyrektor Zespołu Szkół -->
+1047:                <!-- SLAJD 22: Nowy, Barwny Okres -->
+1067:                <!-- SLAJD 23: Noc, Która Wstrzymała Oddech -->
+1071:                <!-- FAZA 1: Typewriter z informacją (0-6s, znika po 6s) -->
+1085:                <!-- FAZA 2: Zdjęcie (pojawia się po 5s) -->
+1092:                <!-- SLAJD 24: Wnętrze Zgliszczy -->
+1101:                <!-- SLAJD 25: Utracona Niewinność -->
+1116:                <!-- SLAJD 26: Przez jakiś czas... (uczniowie na kocach) -->
+1133:        <!-- SEPARATOR: ROZDZIAŁ IV - ROZWÓJ I NOWOCZESNOŚĆ -->
+1143:                <!-- SLAJD 27: Wstaliśmy z Popiołów -->
+1160:                <!-- SLAJD 28: Sport Łączy Pokolenia -->
+1182:                <!-- SLAJD 29: Kreatywność w Szkolnej Ławce -->
+1201:                <!-- SLAJD 30: Scena dla Nowych Talentów -->
+1224:                <!-- SLAJD 31: Symboliczne Pożegnania -->
+1239:                <!-- SLAJD 32: Zawsze Razem (moved from slide 11) -->
+1258:                <!-- SLAJD 33: Egzaminy? Żaden Stres! (moved from slide 44, title removed) -->
+1274:                <!-- SLAJD 34: Nowe Kierownictwo, Nowe Inwestycje -->
+1299:                <!-- SLAJD 35: Spełnione Marzenie - Hala Sportowa 2013 -->
+1312:        <!-- SEPARATOR: ROZDZIAŁ V - DZIEDZICTWO -->
+1322:                <!-- SLAJD 36: Wspólnota Dziś -->
+1345:                <!-- SLAJD 37: Wychowanie przez Pamięć -->
+1367:                <!-- SLAJD 38: Nasze Tradycje: Wczoraj i Dziś -->
+1390:                <!-- SLAJD 39: Szkoła Otwarta na Świat -->
+1422:                <!-- SLAJD 41: Kolejne Pokolenia Uczniów -->
+1435:                <!-- Captions below images -->
+1450:                <!-- SLAJD 40: Nauczyciele na Przestrzeni Dekad -->
+1475:                <!-- SLAJD 42: Szkoła to Wspomnienia -->
+1505:                <!-- SLAJD 43: Wartości, Które Nas Kształtowały -->
+1510:                <!-- Two photos side by side -->
+1522:                <!-- Red gradient text box -->
+1533:                <!-- SLAJD 44: Symbol, na Który Czekamy -->
+1559:                <!-- SLAJD 45: Podziękowania -->
+1593:                <!-- SLAJD 47: Fundamenty - Cisi Bohaterowie -->
+1622:                <!-- SLAJD 46: Przesłanie na Przyszłość -->
+1627:            <!-- Text box positioned directly on slide, not inside slide-content -->
+1648:    <!-- SYSTEM AUDIO (Single element for all tracks) -->
+1651:    <!-- Nawigacja -->
+1655:    <!-- Kontrolki -->

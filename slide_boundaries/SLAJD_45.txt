@@ -1,0 +1,36 @@
+1559-1592
+
+---ANALYSIS---
+Number of images: 0 (no <img> tags found)
+
+CSS rules affecting image size:
+1. `.notebook-bg` (lines 67-70)
+   - background-image: url('./assets/zeszyt.png')
+   - background-size: cover
+   - NOTE: This is a background image, not an <img> tag
+
+2. `.logo-corner img` (lines 140-143)
+   - height: 120px
+   - filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.8))
+   - NOTE: Only affects logo if present on slide
+
+3. `.fullscreen-image` (lines 367-374)
+   - position: absolute
+   - width: 100%
+   - height: 100%
+   - object-fit: cover
+   - NOTE: Not used on this slide
+
+4. `.photo-large img`, `.photo-small img` (lines 410-420)
+   - width: 100%
+   - height: auto
+   - transform: rotate(-1deg) / rotate(2deg)
+   - NOTE: Two-photo layout, not used on this slide
+
+5. `.portrait-frame img` (lines 480-484)
+   - width: 480px
+   - height: auto
+   - NOTE: Portrait frame layout, not used on this slide
+
+CONCLUSION: SLAJD 45 contains NO image tags (<img>). The slide is purely text-based with emoji characters and gradient backgrounds. The only background image is from `.notebook-bg` class, which applies a background-image CSS property rather than an <img> element.
+---END---

@@ -1,0 +1,53 @@
+1239-1257
+
+---ANALYSIS---
+Number of images: 3
+
+Images on SLAJD 32:
+1. IMG_20251029_110123661.jpg (line 1245) - inline style: width: 630px; height: auto
+2. piwo1.png (line 1248) - inline style: width: 630px; height: auto
+3. piwo2.jpg (line 1251) - inline style: width: 630px; height: auto
+
+CSS rules affecting image sizing:
+
+1. .slide (lines 28-39):
+   - display: flex
+   - align-items: center
+   - justify-content: center
+   (Flexbox layout centers content)
+
+2. .slide-content (lines 58-64):
+   - max-width: 1200px
+   - padding: 60px
+   (Container constraint and spacing)
+
+3. .portrait-frame img (lines 480-484):
+   - width: 480px
+   - height: auto
+   (Similar pattern for other image sizing)
+
+4. .photo-large img, .photo-small img (lines 410-416):
+   - width: 100%
+   - height: auto
+   - border: 8px solid #fff
+   - box-shadow: 0 10px 40px rgba(0,0,0,0.5)
+   - transform: rotate(-1deg)
+   (Demonstrates responsive sizing pattern used elsewhere)
+
+5. .photo-small img (lines 418-420):
+   - transform: rotate(2deg)
+
+6. * (lines 8-12):
+   - box-sizing: border-box
+   (Global sizing model - includes padding/border in width calculation)
+
+Inline styles (images in SLAJD 32):
+- width: 630px
+- height: auto
+- border: 8px solid #fff
+- box-shadow: 0 10px 40px rgba(0,0,0,0.5)
+
+Layout context:
+- Parent container uses flexbox with gap: 25px
+- flex-wrap: wrap allows responsive wrapping
+---END---

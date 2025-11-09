@@ -1,0 +1,52 @@
+1505-1532
+
+---ANALYSIS---
+Number of images: 2
+
+CSS rules affecting image size:
+
+FROM STYLESHEET (lines 7-597):
+
+1. .slide (lines 28-39)
+   - width: 100%
+   - height: 100%
+   - position: absolute
+   - display: flex
+   - align-items: center
+   - justify-content: center
+   - background-size: cover
+   - background-position: center
+
+2. .slide-content (lines 58-64)
+   - position: relative
+   - z-index: 2
+   - text-align: center
+   - padding: 60px
+   - max-width: 1200px
+
+3. .notebook-bg (lines 67-70)
+   - background-image: url('./assets/zeszyt.png')
+   - background-size: cover
+
+INLINE STYLES ON IMAGES (lines 1513, 1517):
+   - width: 100%
+   - border: 12px solid #fff
+   - box-shadow: 0 15px 60px rgba(0,0,0,0.6)
+   - border-radius: 8px
+
+INLINE STYLES ON IMAGE CONTAINERS (lines 1512, 1516):
+   Parent container (line 1511):
+   - display: flex
+   - gap: 40px
+   - align-items: center
+   - margin-bottom: 50px
+   
+   Child divs (flex: 1):
+   - flex: 1 (equal distribution of available space)
+
+NOTES:
+- Images are in a 2-column flexbox layout with equal flex distribution (flex: 1 each)
+- Primary sizing is done via inline width: 100% on images
+- Content is constrained by .slide-content max-width: 1200px
+- Slide background uses notebook texture via .notebook-bg
+---END---

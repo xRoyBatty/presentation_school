@@ -1,0 +1,57 @@
+829-845
+
+---ANALYSIS---
+Number of images: 1
+
+CSS rules affecting image size:
+
+1. .slide (lines 28-39):
+   - display: flex; align-items: center; justify-content: center
+   - width: 100%; height: 100%
+   - background-size: cover; background-position: center
+
+2. .notebook-bg (lines 67-70):
+   - background-image: url('./assets/zeszyt.png')
+   - background-size: cover
+
+3. .slide-content (lines 58-64):
+   - padding: 60px
+   - max-width: 1200px
+
+4. .logo-corner img (lines 140-143):
+   - height: 120px
+   - filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.8))
+
+5. .fullscreen-image (lines 367-374):
+   - position: absolute; top: 0; left: 0
+   - width: 100%; height: 100%
+   - object-fit: cover
+
+6. .two-photos (lines 394-400):
+   - display: flex; gap: 40px; padding: 80px
+   - align-items: center; justify-content: center
+
+7. .photo-large (lines 402-404):
+   - flex: 2
+
+8. .photo-small (lines 406-408):
+   - flex: 1
+
+9. .photo-large img, .photo-small img (lines 410-416):
+   - width: 100%; height: auto
+   - border: 8px solid #fff
+   - box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5)
+   - transform: rotate(-1deg)
+
+10. .photo-small img (lines 418-420):
+    - transform: rotate(2deg)
+
+11. .portrait-frame (lines 472-478):
+    - border: 10px solid #8B4513; padding: 10px
+    - background: #fff
+    - box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7)
+
+12. .portrait-frame img (lines 480-484):
+    - display: block
+    - width: 480px; height: auto
+---END---

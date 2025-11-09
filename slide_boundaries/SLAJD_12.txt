@@ -1,0 +1,23 @@
+846-873
+
+---ANALYSIS---
+Number of images: 2
+
+CSS rules affecting image size:
+1. .fullscreen-image (line 367-374):
+   - width: 100%
+   - height: 100%
+   - object-fit: cover
+   - position: absolute; top: 0; left: 0;
+
+2. .slide-content (line 58-64, parent container):
+   - max-width: 1200px
+
+3. First image (line 848) - fullscreen-image:
+   - Inline style: object-fit: cover
+   - Class: fullscreen-image (CSS rules above)
+
+4. Second image (line 867) - cork-note image:
+   - Inline styles: width: 100%; max-width: 600px; border: 8px solid #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.5)
+   - Parent container inline style: max-width: 900px (applies visual constraint)
+---END---

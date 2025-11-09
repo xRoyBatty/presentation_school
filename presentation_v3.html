@@ -675,7 +675,7 @@
         </div>
 
         <!-- SEPARATOR: ROZDZIAŁ I - GENEZA -->
-        <div class="slide" data-duration="5000" style="background: linear-gradient(135deg, #1a1a1a 0%, #3a1a1a 100%);">
+        <div class="slide" data-duration="5000" data-separator="true" style="background: linear-gradient(135deg, #1a1a1a 0%, #3a1a1a 100%);">
             <div class="slide-content">
                 <h1 class="anim-scale-up" style="font-size: 3.5rem; letter-spacing: 0.2em;">ROZDZIAŁ I</h1>
                 <h2 class="anim-fade-in-1" style="margin-top: 30px; font-size: 2.2rem;">Geneza</h2>
@@ -817,7 +817,7 @@
         </div>
 
         <!-- ROZDZIAŁ II: Separator -->
-        <div class="slide" data-duration="5000" style="background: linear-gradient(135deg, #1a1a1a 0%, #4a3a2a 100%);">
+        <div class="slide" data-duration="5000" data-separator="true" style="background: linear-gradient(135deg, #1a1a1a 0%, #4a3a2a 100%);">
             <div class="slide-content">
                 <h1 class="anim-scale-up" style="font-size: 3.5rem; letter-spacing: 0.2em;">ROZDZIAŁ II</h1>
                 <h2 class="anim-fade-in-1" style="margin-top: 30px; font-size: 2.2rem;">Lata Próby i Ukrytej Siły</h2>
@@ -961,7 +961,7 @@
         </div>
 
         <!-- SEPARATOR: ROZDZIAŁ III - CYFROWA ERA I PRÓBA OGNIA -->
-        <div class="slide" data-duration="5000" style="background: linear-gradient(135deg, #1a1a1a 0%, #2c3e50 100%);">
+        <div class="slide" data-duration="5000" data-separator="true" style="background: linear-gradient(135deg, #1a1a1a 0%, #2c3e50 100%);">
             <div class="slide-content">
                 <h1 class="anim-scale-up" style="font-size: 3.5rem; letter-spacing: 0.2em;">ROZDZIAŁ III</h1>
                 <h2 class="anim-fade-in-1" style="margin-top: 30px; font-size: 2.2rem;">Cyfrowa Era i Próba Ognia</h2>
@@ -1131,7 +1131,7 @@
         </div>
 
         <!-- SEPARATOR: ROZDZIAŁ IV - ROZWÓJ I NOWOCZESNOŚĆ -->
-        <div class="slide" data-duration="5000" style="background: linear-gradient(135deg, #1a1a1a 0%, #27ae60 100%);">
+        <div class="slide" data-duration="5000" data-separator="true" style="background: linear-gradient(135deg, #1a1a1a 0%, #27ae60 100%);">
             <div class="slide-content">
                 <h1 class="anim-scale-up" style="font-size: 3.5rem; letter-spacing: 0.2em;">ROZDZIAŁ IV</h1>
                 <h2 class="anim-fade-in-1" style="margin-top: 30px; font-size: 2.2rem;">Rozwój i Nowoczesność</h2>
@@ -1310,7 +1310,7 @@
         </div>
 
         <!-- SEPARATOR: ROZDZIAŁ V - DZIEDZICTWO -->
-        <div class="slide" data-duration="5000" style="background: linear-gradient(135deg, #1a1a1a 0%, #8e44ad 100%);">
+        <div class="slide" data-duration="5000" data-separator="true" style="background: linear-gradient(135deg, #1a1a1a 0%, #8e44ad 100%);">
             <div class="slide-content">
                 <h1 class="anim-scale-up" style="font-size: 3.5rem; letter-spacing: 0.2em;">ROZDZIAŁ V</h1>
                 <h2 class="anim-fade-in-1" style="margin-top: 30px; font-size: 2.2rem;">Dziedzictwo</h2>
@@ -1419,7 +1419,7 @@
             </div>
         </div>
 
-                <!-- SLAJD 41: Kolejne Pokolenia Uczniów -->
+                <!-- SLAJD 40: Kolejne Pokolenia Uczniów -->
         <div class="slide notebook-bg" data-duration="15000">
             <div class="slide-content">
                 <h2 class="anim-typewriter" style="margin-bottom: 50px; color: #3498db; font-size: 3.5rem; text-transform: uppercase;">Kolejne Pokolenia Uczniów</h2>
@@ -1447,7 +1447,7 @@
             </div>
         </div>
 
-                <!-- SLAJD 40: Nauczyciele na Przestrzeni Dekad -->
+                <!-- SLAJD 41: Nauczyciele na Przestrzeni Dekad -->
         <div class="slide notebook-bg" data-duration="15000">
             <div class="slide-content">
                 <h2 class="anim-typewriter" style="margin-bottom: 50px; color: #e74c3c; font-size: 3.5rem; text-transform: uppercase;">...I NAUCZYCIELI</h2>
@@ -1590,7 +1590,7 @@
             </div>
         </div>
 
-                <!-- SLAJD 47: Fundamenty - Cisi Bohaterowie -->
+                <!-- SLAJD 46: Fundamenty - Cisi Bohaterowie -->
         <div class="slide notebook-bg" data-duration="12000">
             <div class="slide-content">
                 <h2 class="anim-typewriter" style="margin-bottom: 50px; color: #27ae60; font-size: 3rem;">Cisi Bohaterowie</h2>
@@ -1619,7 +1619,7 @@
             </div>
         </div>
 
-                <!-- SLAJD 46: Przesłanie na Przyszłość -->
+                <!-- SLAJD 47: Przesłanie na Przyszłość -->
         <div class="slide" data-duration="15000">
             <img src="./assets/WhatsApp Image 2025-11-06 at 21.47.50.jpeg" alt="Sadzenie drzewka - symbol przyszłości" class="fullscreen-image" style="filter: brightness(1.1) saturate(1.2);">
             <div class="slide-overlay" style="background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0.1) 100%);"></div>
@@ -2106,7 +2106,22 @@
         }
 
         function updateSlideNumber() {
-            document.getElementById('slideNumber').textContent = `${currentSlide + 1} / ${totalSlides}`;
+            // Count only content slides (exclude separators)
+            let contentSlidesBefore = 0;
+            for (let i = 0; i < currentSlide; i++) {
+                if (!slides[i].dataset.separator) {
+                    contentSlidesBefore++;
+                }
+            }
+
+            // Current slide number (only if not a separator)
+            const currentContentSlide = slides[currentSlide].dataset.separator ?
+                contentSlidesBefore : contentSlidesBefore + 1;
+
+            // Total content slides (exclude separators)
+            const totalContentSlides = Array.from(slides).filter(slide => !slide.dataset.separator).length;
+
+            document.getElementById('slideNumber').textContent = `${currentContentSlide} / ${totalContentSlides}`;
         }
 
         // ==========================================

@@ -1,0 +1,26 @@
+1622-1644
+---ANALYSIS---
+Number of images: 1
+CSS rules affecting image size:
+1. .slide (parent container, lines 28-39)
+   - width: 100%
+   - height: 100%
+   - position: absolute
+
+2. .fullscreen-image (lines 367-374)
+   - position: absolute
+   - top: 0
+   - left: 0
+   - width: 100%
+   - height: 100%
+   - object-fit: cover
+
+3. Inline styles on <img> element (line 1624)
+   - filter: brightness(1.1) saturate(1.2) [filtering only, not sizing]
+
+IMAGE SIZING BEHAVIOR:
+- The single <img> tag with class "fullscreen-image" fills the entire viewport (100% width and height)
+- object-fit: cover ensures the image covers the entire area while maintaining aspect ratio
+- The image is positioned absolutely at top: 0, left: 0, covering the full 100vw × 100vh slide
+- No max-width, flex properties, or percentage-based sizing constraints beyond 100%
+---END---

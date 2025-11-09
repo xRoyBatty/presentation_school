@@ -1,0 +1,56 @@
+718-736
+
+---ANALYSIS---
+Number of images: 2
+
+CSS rules affecting image size:
+
+1. BACKGROUND IMAGE (line 720 - inline styles):
+   - width: 100%
+   - height: 100%
+   - object-fit: cover
+   - position: absolute
+   - opacity: 0.2
+   (Covers entire slide as low-opacity background)
+
+2. PORTRAIT FRAME CONTAINER (.portrait-frame, lines 472-478):
+   - border: 10px solid #8B4513
+   - padding: 10px
+   - background: #fff
+   - box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7)
+
+3. PORTRAIT FRAME IMAGE (.portrait-frame img, lines 480-484):
+   - display: block
+   - width: 480px
+   - height: auto
+   (Fixed width portrait image inside frame)
+
+4. SLIDE CONTAINER (.slide, lines 28-39):
+   - width: 100%
+   - height: 100%
+   - display: flex
+   - align-items: center
+   - justify-content: center
+
+5. SLIDE CONTENT (.slide-content, lines 58-64):
+   - max-width: 1200px
+   - padding: 60px
+   - position: relative
+   - z-index: 2
+
+6. FLEX WRAPPER (line 722 - inline styles):
+   - display: flex
+   - gap: 80px
+   - align-items: center
+   - max-width: 1400px
+   (Container for portrait frame and text)
+
+7. PORTRAIT FRAME WRAPPER (line 723 - inline styles):
+   - flex: 0 0 auto
+   (Prevents portrait frame from shrinking; maintains fixed 480px width)
+
+8. TEXT CONTENT WRAPPER (line 729 - inline styles):
+   - flex: 1
+   (Takes remaining space in flex container)
+
+---END---

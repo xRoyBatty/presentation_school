@@ -1,0 +1,48 @@
+782-802
+
+---ANALYSIS---
+Number of images: 4
+
+CSS rules affecting image size:
+
+1. .fullscreen-image (lines 367-374)
+   - position: absolute
+   - width: 100%
+   - height: 100%
+   - object-fit: cover
+
+2. .photo-pin (lines 347-349)
+   - display: inline-block
+
+3. .slide (lines 28-39)
+   - display: flex
+   - align-items: center
+   - justify-content: center
+   - width: 100%
+   - height: 100%
+
+4. .slide-content (lines 58-64)
+   - max-width: 1200px
+   - padding: 60px
+
+5. Container div (line 788 - inline styles)
+   - display: flex
+   - gap: 50px
+   - justify-content: center
+   - align-items: center
+   - flex-wrap: wrap
+
+6. Background map image (line 784 - inline styles)
+   - object-fit: cover
+   - opacity: 0.4
+
+7. Photo pin images (lines 790, 793, 796 - inline styles on each)
+   - width: 420px
+   - height: 310px
+   - object-fit: cover
+   - border: 10px solid #fff
+   - box-shadow: 0 15px 40px rgba(0,0,0,0.6)
+
+8. .anim-drop-1, .anim-drop-2, .anim-drop-3 (animation classes on photo containers, lines 270-280)
+   - animation: dropIn 1s ease-out with staggered delays (0.5s, 1s, 1.5s)
+---END---

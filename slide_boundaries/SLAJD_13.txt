@@ -1,0 +1,43 @@
+874-882
+
+---ANALYSIS---
+Number of images: 1
+
+CSS rules affecting image size:
+
+1. .fullscreen-image (lines 367-374):
+   - position: absolute;
+   - top: 0;
+   - left: 0;
+   - width: 100%;
+   - height: 100%;
+   - object-fit: cover;
+
+2. .ken-burns (lines 127-129):
+   - animation: kenBurns 15s ease-in-out infinite alternate;
+   [affects visual scale via transform]
+
+3. .slide (lines 28-39):
+   - width: 100%;
+   - height: 100%;
+   - position: absolute;
+
+4. @keyframes kenBurns (lines 117-124):
+   - 0%: transform: scale(1) translate(0, 0);
+   - 100%: transform: scale(1.15) translate(-20px, -10px);
+
+5. .slide-overlay (lines 47-55):
+   - position: absolute;
+   - width: 100%;
+   - height: 100%;
+   - z-index: 1;
+
+6. .text-bar (lines 377-385):
+   - position: absolute;
+   - bottom: 0;
+   - left: 0;
+   - width: 100%;
+   - z-index: 2;
+
+Image classes in slide HTML: .fullscreen-image, .ken-burns
+---END---
