@@ -1,1 +1,61 @@
 1299-1321
+
+---ANALYSIS---
+Number of images: 1
+
+CSS rules affecting image size:
+
+1. .presentation (lines 21-25):
+   width: 100vw;
+   height: 100vh;
+   position: relative;
+
+2. .slide (lines 28-39):
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   opacity: 0;
+   transition: opacity 1s ease-in-out;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-size: cover;
+   background-position: center;
+
+3. .fullscreen-image (lines 367-374):
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+
+4. .slide.active .anim-scale-up (lines 298-300):
+   animation: scaleUp 1.5s ease-out both;
+
+5. @keyframes scaleUp (lines 197-206):
+   from {
+       opacity: 0;
+       transform: scale(0.8);
+   }
+   to {
+       opacity: 1;
+       transform: scale(1);
+   }
+
+6. .ken-burns (lines 127-129):
+   animation: kenBurns 15s ease-in-out infinite alternate;
+
+7. @keyframes kenBurns (lines 117-124):
+   0% {
+       transform: scale(1) translate(0, 0);
+   }
+   100% {
+       transform: scale(1.15) translate(-20px, -10px);
+   }
+
+IMAGE HTML (lines 1301):
+<img src="./assets/IMG_20251029_110017725.jpg" alt="Otwarcie Hali Sportowej 2013" class="fullscreen-image anim-scale-up" style="animation: kenBurns 15s ease-in-out infinite;">
+
+The image fills the entire viewport (100vw x 100vh) via .fullscreen-image class, scales from 0.8 to 1 via animation, and applies Ken Burns effect via inline style and .ken-burns animation.
+---END---

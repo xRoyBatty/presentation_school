@@ -1,1 +1,16 @@
 1345-1366
+
+---ANALYSIS---
+Number of images: 1
+
+CSS rules affecting image size:
+1. .slide (lines 28-39): width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;
+2. .slide-content (lines 58-64): max-width: 1200px; padding: 60px;
+3. .anim-slide-right (lines 230-232): animation: slideInRight 1.5s ease-out both;
+4. @keyframes slideInRight (lines 172-181): transform: translateX(100px) rotate(5deg) → translateX(0) rotate(2deg);
+
+Additional sizing from inline styles (not in <style>):
+- Parent div: flex: 1; order: 2; max-width: 750px;
+- Image element: width: 100%; border: 12px solid #fff; border-radius: 10px; filter: brightness(0.95) contrast(1.1);
+
+---END---

@@ -1,1 +1,65 @@
 1533-1558
+
+---ANALYSIS---
+Number of images: 0 (SLAJD 44 uses a <video> element, not <img> tags)
+
+CSS rules that affect image sizing (from lines 7-597 of presentation_v3.html):
+
+1. .slide (lines 28-39):
+   - width: 100%
+   - height: 100%
+   - display: flex
+   - align-items: center
+   - justify-content: center
+   - background-size: cover
+   - background-position: center
+
+2. .slide-overlay (lines 47-55):
+   - position: absolute
+   - top: 0
+   - left: 0
+   - width: 100%
+   - height: 100%
+
+3. .slide-content (lines 58-64):
+   - position: relative
+   - z-index: 2
+   - max-width: 1200px
+   - padding: 60px
+
+4. .fullscreen-image (lines 367-374):
+   - position: absolute
+   - top: 0
+   - left: 0
+   - width: 100%
+   - height: 100%
+   - object-fit: cover
+
+5. .logo-corner img (lines 140-143):
+   - height: 120px
+   - filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.8))
+
+6. .photo-large img, .photo-small img (lines 410-416):
+   - width: 100%
+   - height: auto
+   - border: 8px solid #fff
+   - box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5)
+   - transform: rotate(-1deg)
+
+7. .photo-small img (lines 418-420):
+   - transform: rotate(2deg)
+
+8. .portrait-frame img (lines 480-484):
+   - display: block
+   - width: 480px
+   - height: auto
+
+NOTE: SLAJD 44 contains a <video> element (lines 1535-1537) with inline styles:
+  - position: absolute
+  - width: 100%
+  - height: 100%
+  - object-fit: cover
+  - opacity: 0.7
+
+These inline styles on the video element are NOT part of the CSS <style> section.
+---END---

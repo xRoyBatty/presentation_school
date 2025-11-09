@@ -1,1 +1,59 @@
 1475-1504
+
+---ANALYSIS---
+Number of images: 15
+
+CSS rules affecting image sizing on this slide:
+
+1. .slide (lines 28-39)
+   - width: 100%
+   - height: 100%
+   - background-size: cover
+   - background-position: center
+
+2. .slide-content (lines 58-64)
+   - max-width: 1200px
+   - padding: 60px
+
+3. .fullscreen-image (lines 367-374)
+   - position: absolute
+   - top: 0
+   - left: 0
+   - width: 100%
+   - height: 100%
+   - object-fit: cover
+
+4. .photo-large img, .photo-small img (lines 410-416)
+   - width: 100%
+   - height: auto
+   - border: 8px solid #fff
+   - box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5)
+   - transform: rotate(-1deg)
+
+5. .photo-small img (lines 418-420)
+   - transform: rotate(2deg)
+
+6. .portrait-frame img (lines 480-484)
+   - display: block
+   - width: 480px
+   - height: auto
+
+7. .logo-corner img (lines 140-143)
+   - height: 120px
+   - filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.8))
+
+INLINE STYLES (on each <img> tag in SLAJD 42):
+- width: 100%
+- height: 150px
+- object-fit: cover
+- border: 4px solid #fff
+- box-shadow: 0 5px 20px rgba(0,0,0,0.4)
+
+PARENT GRID CONTAINER (inline styled):
+- display: grid
+- grid-template-columns: repeat(5, 1fr)
+- gap: 15px
+- margin-top: 30px
+
+NOTE: SLAJD 42 uses a 5-column responsive grid with fixed image heights (150px) and object-fit: cover for aspect ratio management. The inline styles directly on images take precedence over any CSS class rules. No CSS classes affecting image size are applied to images on this slide.
+---END---

@@ -1,1 +1,18 @@
 947-972
+
+---ANALYSIS---
+Number of images: 1
+
+CSS rules affecting image sizing:
+1. * { box-sizing: border-box; } (line 11) - Universal selector affects sizing model for all elements
+2. .slide { display: flex; align-items: center; justify-content: center; } (lines 34-36) - Flex layout context for slide
+3. .slide-content { max-width: 1200px; padding: 60px; text-align: center; } (lines 63-64) - Container constraints
+4. .slide-content { position: relative; z-index: 2; } (lines 59-60) - Positioning context
+
+NOTE: SLAJD 18 image (line 952) uses INLINE STYLES for primary sizing:
+- Inline image styles: width: 100%; border: 12px solid #fff; box-shadow: 0 10px 40px rgba(0,0,0,0.5); opacity: 0.7;
+- Inline parent div styles: flex: 1; max-width: 1050px;
+- Parent flex container: display: flex; gap: 50px; align-items: center;
+
+No image-specific CSS classes are applied to this image (.fullscreen-image, .photo-large img, .photo-small img, .portrait-frame img, .logo-corner img are available in stylesheet but not used on SLAJD 18).
+---END---

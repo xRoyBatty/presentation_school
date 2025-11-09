@@ -1,1 +1,35 @@
 1450-1474
+
+---ANALYSIS---
+Number of images: 2
+
+CSS rules affecting image size:
+
+INLINE STYLES (on <img> elements):
+- width: 100%
+- height: 100%
+- object-fit: cover
+- filter: sepia(0.3) contrast(1.1) [on first image]
+
+INLINE STYLES (on parent container divs):
+- height: 500px [constrains image height]
+- position: relative
+- overflow: hidden
+
+GRID LAYOUT (parent container):
+- display: grid
+- grid-template-columns: 1fr 1fr [equal columns]
+- gap: 3px
+- margin-top: 30px
+- border: 8px solid #2c3e50
+
+FROM <style> SECTION:
+- .slide { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
+- .slide-content { max-width: 1200px; padding: 60px; }
+- Animation classes (anim-slide-left, anim-slide-right-delay) apply transforms but don't affect sizing
+
+KEY SIZING MECHANISM:
+The images are sized via a 2-column grid layout where each column is 1fr (equal width).
+Each image container has height: 500px fixed.
+Images fill their containers completely with object-fit: cover (maintains aspect ratio).
+---END---

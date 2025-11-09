@@ -1,1 +1,41 @@
 1201-1223
+
+---ANALYSIS---
+Number of images: 3
+
+CSS rules affecting image size:
+
+DIRECT IMAGE STYLING (INLINE):
+- width: 350px; height: 350px; object-fit: cover; border: 10px solid #fff; box-shadow: 0 15px 50px rgba(0,0,0,0.7);
+
+GLOBAL/INHERITED CSS RULES:
+1. * { box-sizing: border-box; } (line 8-12)
+   - Applies globally to all elements including images
+
+2. .slide { display: flex; align-items: center; justify-content: center; } (lines 28-39)
+   - Parent container flex properties
+
+3. .slide-content { max-width: 1200px; padding: 60px; } (lines 58-64)
+   - Parent wrapper max-width constraint
+
+4. .slide h2 { animation: fadeInUp 1.5s ease-out 0.3s both; } (line 86)
+   - Affects h2 title, not images
+
+ANIMATION CLASSES APPLIED TO IMAGE CONTAINERS:
+1. .slide.active .anim-drop-1 { animation: dropIn 1s ease-out 0.5s both; } (lines 270-272)
+2. .slide.active .anim-drop-2 { animation: dropIn 1s ease-out 1s both; } (lines 274-276)
+3. .slide.active .anim-drop-3 { animation: dropIn 1s ease-out 1.5s both; } (lines 278-280)
+
+@keyframes dropIn (lines 183-195):
+   - 0%: opacity 0, transform translateY(-100px) scale(0.3)
+   - 50%: transform translateY(20px) scale(1.1)
+   - 100%: opacity 1, transform translateY(0) scale(1)
+
+PARENT FLEX LAYOUT (line 1205):
+- display: flex; gap: 30px; align-items: center; justify-content: center; flex-wrap: wrap;
+- Controls spacing and alignment of image containers
+
+IMAGE CONTAINER STYLING (lines 1206-1214):
+- transform: rotate(-5deg); / rotate(3deg); / rotate(-3deg);
+- Rotates individual image containers (not images themselves)
+---END---

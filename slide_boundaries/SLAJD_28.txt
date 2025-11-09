@@ -1,1 +1,59 @@
 1160-1181
+
+---ANALYSIS---
+Number of images: 2
+
+CSS rules affecting image size:
+1. .slide (lines 28-39)
+   - width: 100%;
+   - height: 100%;
+   - display: flex;
+   - align-items: center;
+   - justify-content: center;
+
+2. .notebook-bg (lines 67-70)
+   - background-image: url('./assets/zeszyt.png');
+   - background-size: cover;
+
+3. .slide-content (lines 58-64)
+   - position: relative;
+   - z-index: 2;
+   - text-align: center;
+   - padding: 60px;
+   - max-width: 1200px;
+
+4. .anim-slide-left (lines 226-228)
+   - animation: slideInLeft 1.5s ease-out both;
+   - (Animation class, affects rendering/positioning)
+
+5. .anim-slide-right-delay (lines 234-236)
+   - animation: slideInRight 1.5s ease-out 0.5s both;
+   - (Animation class, affects rendering/positioning)
+
+6. .anim-fade-up-delay (lines 246-248)
+   - animation: fadeInUp 1.5s ease-out 0.5s both;
+   - (Animation class, affects rendering/positioning)
+
+Inline Styles on Images (lines 1166, 1170):
+   - width: 100%;
+   - border: 12px solid #fff;
+   - box-shadow: 0 15px 50px rgba(0,0,0,0.6);
+   - transform: rotate(-2deg) or rotate(2deg);
+
+Parent Container Inline Styles (lines 1165, 1169):
+   - flex: 1;
+   - max-width: 650px;
+
+Flex Container Inline Styles (line 1164):
+   - display: flex;
+   - gap: 40px;
+   - align-items: center;
+   - justify-content: center;
+
+LAYOUT SUMMARY:
+- Two images displayed side-by-side in a flex container
+- Each image container has flex: 1 and max-width: 650px
+- Images use 100% width of their containers
+- Images include 12px white borders and rotation transforms
+- Overall layout is controlled by flexbox with 40px gap between images
+---END---
