@@ -1240,15 +1240,17 @@
         <div class="slide notebook-bg" data-duration="15000">
             <div class="slide-content">
                 <h2 style="margin-bottom: 50px;">Ale radosne chwile pamięta się najdłużej!</h2>
-                <div style="display: flex; gap: 25px; justify-content: center; align-items: flex-start; flex-wrap: wrap;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 1000px; margin: 0 auto;">
+                    <!-- First row: 2 images -->
                     <div class="anim-slide-left">
-                        <img src="./assets/IMG_20251029_110123661.jpg" alt="Nauczyciele przy stole 1" style="width: 630px; height: auto; border: 8px solid #fff; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+                        <img src="./assets/IMG_20251029_110123661.jpg" alt="Nauczyciele przy stole 1" style="width: 100%; height: auto; border: 8px solid #fff; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
                     </div>
                     <div class="anim-fade-up-delay">
-                        <img src="./assets/piwo1.png" alt="Nauczyciele przy stole 2" style="width: 630px; height: auto; border: 8px solid #fff; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+                        <img src="./assets/piwo1.png" alt="Nauczyciele przy stole 2" style="width: 100%; height: auto; border: 8px solid #fff; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
                     </div>
-                    <div class="anim-slide-right-delay-long">
-                        <img src="./assets/piwo2.jpg" alt="Nauczyciele przy stole 3" style="width: 630px; height: auto; border: 8px solid #fff; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+                    <!-- Second row: 1 centered image -->
+                    <div class="anim-slide-right-delay-long" style="grid-column: 1 / -1; max-width: 490px; margin: 0 auto;">
+                        <img src="./assets/piwo2.jpg" alt="Nauczyciele przy stole 3" style="width: 100%; height: auto; border: 8px solid #fff; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
                     </div>
                 </div>
                 <p class="caption" style="margin-top: 40px; font-size: 1.8rem; color: #fff; text-shadow: 2px 2px 6px rgba(0,0,0,0.8);">Bo pokój nauczycielski to nie tylko miejsce pracy. To także przestrzeń przyjaźni i wspólnego śmiechu.</p>
