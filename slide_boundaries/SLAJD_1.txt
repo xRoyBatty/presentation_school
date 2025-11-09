@@ -1,0 +1,23 @@
+666-686
+
+---ANALYSIS---
+Number of images: 1
+
+CSS rules affecting image size:
+1. .logo-corner img (lines 140-143):
+   - height: 120px;
+   - filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.8));
+
+2. .logo-corner (lines 132-138):
+   - position: absolute;
+   - bottom: 40px;
+   - right: 40px;
+   - z-index: 3;
+   (Positioning rules - places image in bottom-right corner)
+
+Image details:
+- Element: <img src="./assets/herbgminy.jpg" alt="Herb Gminy Dębowa Łąka">
+- Parent class: .logo-corner
+- Sizing method: Fixed height (120px) with proportional width (height: auto is implicit)
+- Width: Not explicitly set (maintains aspect ratio based on 120px height)
+---END---

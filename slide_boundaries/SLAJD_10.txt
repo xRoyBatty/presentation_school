@@ -1,0 +1,32 @@
+803-828
+
+---ANALYSIS---
+Number of images: 2
+
+CSS rules affecting image size:
+
+1. .ken-burns (lines 127-129)
+   - animation: kenBurns 15s ease-in-out infinite alternate;
+   [Applied to container divs wrapping the images]
+
+2. @keyframes kenBurns (lines 117-124)
+   - 0%: transform: scale(1) translate(0, 0);
+   - 100%: transform: scale(1.15) translate(-20px, -10px);
+   [Scales images from 100% to 115%]
+
+3. .slide-content (lines 58-64)
+   - max-width: 1200px;
+   [Constrains parent container width]
+
+4. .slide (lines 28-39)
+   - display: flex;
+   - align-items: center;
+   - justify-content: center;
+   [Flexbox layout affecting image container positioning]
+
+5. Inline styles in HTML (lines 808, 809, 811, 812):
+   - Container divs: flex: 1; max-width: 1125px;
+   - img tags: width: 100%; border: 10px solid #fff; box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+   [Direct inline styles controlling image sizing]
+
+---END---

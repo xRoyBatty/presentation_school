@@ -1,0 +1,37 @@
+737-752
+
+---ANALYSIS---
+Number of images: 2
+
+CSS rules affecting image size:
+
+1. .slide (lines 28-39)
+   - width: 100%
+   - height: 100%
+   - display: flex
+   - align-items: center
+   - justify-content: center
+
+2. .slide-content (lines 58-64)
+   - max-width: 1200px
+   - padding: 60px
+   - (constrains parent container)
+
+3. .notebook-bg (lines 67-70)
+   - background-image: url('./assets/zeszyt.png')
+   - background-size: cover
+   - (affects slide background, not image sizing)
+
+4. .slide.active .anim-fade-up (lines 242-244)
+   - animation: fadeInUp 1.5s ease-out both
+   - (animation on first image container)
+
+5. .slide.active .anim-fade-up-delay (lines 246-248)
+   - animation: fadeInUp 1.5s ease-out 0.5s both
+   - (animation on second image container)
+
+Additional sizing applied via inline styles:
+- Parent divs: flex: 1; max-width: 1125px;
+- Images: width: 100%; border: 8px solid #fff; box-shadow: 0 10px 40px rgba(0,0,0,0.5); transform: rotate(±2deg);
+
+---END---
