@@ -400,7 +400,7 @@
         }
 
         .photo-large {
-            flex: 2;
+            flex: 1.6;
         }
 
         .photo-small {
@@ -739,10 +739,10 @@
             <div class="slide-content">
                 <h2>Nauka w Czasach PRL</h2>
                 <div style="display: flex; gap: 40px; margin-top: 50px; justify-content: center;">
-                    <div class="anim-fade-up" style="flex: 1; max-width: 1125px;">
+                    <div class="anim-fade-up" style="flex: 1; max-width: 900px;">
                         <img src="./assets/WhatsApp Image 2025-10-10 at 09.00.23.jpeg" alt="Sala z transparentem IDEE LENINA" style="width: 100%; border: 8px solid #fff; box-shadow: 0 10px 40px rgba(0,0,0,0.5); transform: rotate(-2deg);">
                     </div>
-                    <div class="anim-fade-up-delay" style="flex: 1; max-width: 1125px;">
+                    <div class="anim-fade-up-delay" style="flex: 1; max-width: 900px;">
                         <img src="./assets/IMG_20251027_130457715.jpg" alt="Sala z V ZJAZD PARTII" style="width: 100%; border: 8px solid #fff; box-shadow: 0 10px 40px rgba(0,0,0,0.5); transform: rotate(2deg);">
                     </div>
                 </div>
@@ -768,10 +768,10 @@
             <div class="slide-content">
                 <h2>Entuzjazm, Który Niósł</h2>
                 <div style="display: flex; gap: 30px; margin-top: 40px; align-items: center; justify-content: center;">
-                    <div class="anim-slide-left" style="flex: 1.2; max-width: 1200px;">
+                    <div class="anim-slide-left" style="flex: 1.2; max-width: 900px;">
                         <img src="./assets/IMG_20251027_130507557.jpg" alt="Uczniowie na obozie" style="width: 100%; border: 10px solid #fff; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
                     </div>
-                    <div class="anim-fade-up-delay" style="flex: 1; max-width: 1050px;">
+                    <div class="anim-fade-up-delay" style="flex: 1; max-width: 750px;">
                         <img src="./assets/IMG_20251027_130510799.jpg" alt="Nauczyciele na obozie" style="width: 100%; border: 10px solid #fff; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
                     </div>
                 </div>
@@ -805,10 +805,10 @@
             <div class="slide-content">
                 <h2 style="margin-bottom: 40px;">Grono Pedagogiczne lat 70.</h2>
                 <div style="display: flex; gap: 30px; justify-content: center;">
-                    <div class="ken-burns" style="flex: 1; max-width: 1125px;">
+                    <div class="ken-burns" style="flex: 1; max-width: 900px;">
                         <img src="./assets/IMG_20251029_110155567.jpg" alt="Uroczystość kadry 1" style="width: 100%; border: 10px solid #fff; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
                     </div>
-                    <div class="ken-burns" style="flex: 1; max-width: 1125px;">
+                    <div class="ken-burns" style="flex: 1; max-width: 900px;">
                         <img src="./assets/IMG_20251029_110204968.jpg" alt="Uroczystość kadry 2" style="width: 100%; border: 10px solid #fff; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
                     </div>
                 </div>
@@ -932,8 +932,8 @@
             <div class="slide-content">
                 <h2 style="margin-bottom: 50px;">Ostatni Dzwonek dla Ósmych Klas</h2>
                 <div style="display: flex; gap: 40px; justify-content: center;">
-                    <img src="./assets/IMG_20251027_130558448.jpg" alt="Zakończenie 1991" class="anim-fade-up" style="max-width: 900px; border: 10px solid #fff; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
-                    <img src="./assets/IMG_20251029_105922622.jpg" alt="Zakończenie lata 80/90" class="anim-fade-up-delay" style="max-width: 900px; border: 10px solid #fff; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+                    <img src="./assets/IMG_20251027_130558448.jpg" alt="Zakończenie 1991" class="anim-fade-up" style="max-width: 800px; border: 10px solid #fff; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+                    <img src="./assets/IMG_20251029_105922622.jpg" alt="Zakończenie lata 80/90" class="anim-fade-up-delay" style="max-width: 800px; border: 10px solid #fff; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
                 </div>
                 <div style="margin-top: 50px;">
                     <p class="anim-word-1" style="font-size: 2.5rem; color: #ffd700;">Radość...</p>
@@ -2174,8 +2174,97 @@
                 showSlide(0);
             } else if (e.key === 'End') {
                 showSlide(totalSlides - 1);
+            } else if (e.key === 'i' || e.key === 'I') {
+                // Show image dimensions info
+                toggleImageInfo();
             }
         });
+
+        // ==========================================
+        // IMAGE DIMENSIONS INFO (Press 'i' to toggle)
+        // ==========================================
+        let imageInfoVisible = false;
+        let imageInfoOverlay = null;
+
+        function toggleImageInfo() {
+            if (imageInfoVisible) {
+                // Hide overlay
+                if (imageInfoOverlay) {
+                    imageInfoOverlay.remove();
+                    imageInfoOverlay = null;
+                }
+                imageInfoVisible = false;
+            } else {
+                // Show overlay with image dimensions
+                const currentSlideElement = slides[currentSlide];
+                const images = currentSlideElement.querySelectorAll('img');
+
+                if (images.length === 0) {
+                    alert('Brak obrazków na tym slajdzie');
+                    return;
+                }
+
+                // Create overlay
+                imageInfoOverlay = document.createElement('div');
+                imageInfoOverlay.style.cssText = `
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background: rgba(0, 0, 0, 0.95);
+                    color: white;
+                    padding: 30px;
+                    border-radius: 15px;
+                    z-index: 10000;
+                    max-width: 800px;
+                    max-height: 80vh;
+                    overflow-y: auto;
+                    box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+                `;
+
+                let html = `<h2 style="margin-top: 0; color: #3498db;">Wymiary obrazków na slajdzie ${currentSlide + 1}</h2>`;
+                html += `<p style="color: #95a5a6; font-size: 0.9em; margin-bottom: 20px;">Naciśnij 'i' ponownie aby zamknąć</p>`;
+
+                images.forEach((img, index) => {
+                    const rendered = img.getBoundingClientRect();
+                    const natural = {width: img.naturalWidth, height: img.naturalHeight};
+
+                    // Calculate scale
+                    const scaleX = (rendered.width / natural.width * 100).toFixed(1);
+                    const scaleY = (rendered.height / natural.height * 100).toFixed(1);
+
+                    // Determine quality
+                    let quality = '';
+                    let qualityColor = '';
+                    if (scaleX > 100 || scaleY > 100) {
+                        quality = '⚠️ POWIĘKSZONY - rozmazany!';
+                        qualityColor = '#e74c3c';
+                    } else if (scaleX > 80) {
+                        quality = '✓ Dobra jakość';
+                        qualityColor = '#2ecc71';
+                    } else {
+                        quality = '✓ Doskonała jakość';
+                        qualityColor = '#27ae60';
+                    }
+
+                    html += `
+                        <div style="background: rgba(255,255,255,0.05); padding: 15px; margin-bottom: 15px; border-radius: 8px; border-left: 4px solid ${qualityColor};">
+                            <div style="font-weight: bold; margin-bottom: 8px;">Obrazek ${index + 1}</div>
+                            <div style="font-size: 0.9em; line-height: 1.6;">
+                                <div><strong>Plik:</strong> ${natural.width} × ${natural.height} px</div>
+                                <div><strong>Wyświetlany:</strong> ${Math.round(rendered.width)} × ${Math.round(rendered.height)} px</div>
+                                <div><strong>Skala:</strong> ${scaleX}% × ${scaleY}%</div>
+                                <div style="color: ${qualityColor}; font-weight: bold; margin-top: 8px;">${quality}</div>
+                            </div>
+                        </div>
+                    `;
+                });
+
+                imageInfoOverlay.innerHTML = html;
+                document.body.appendChild(imageInfoOverlay);
+                imageInfoVisible = true;
+            }
+        }
 
         // ==========================================
         // DEBUG MODE: CONTROL VISIBILITY
