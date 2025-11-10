@@ -1622,7 +1622,7 @@
         </div>
 
                 <!-- SLAJD 47: Przesłanie na Przyszłość -->
-        <div class="slide" data-duration="15000">
+        <div class="slide" data-duration="30000">
             <img src="./assets/WhatsApp Image 2025-11-06 at 21.47.50.jpeg" alt="Sadzenie drzewka - symbol przyszłości" class="fullscreen-image" style="filter: brightness(1.1) saturate(1.2);">
             <div class="slide-overlay" style="background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0.1) 100%);"></div>
 
@@ -1642,6 +1642,15 @@
                         </p>
                     </div>
                 </div>
+            </div>
+
+            <!-- Overlay transition: photo (24s) → video (25-30s) -->
+            <div id="slide47-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #000; z-index: 1000; display: none; opacity: 0; transition: opacity 0.5s ease;">
+                <!-- Fullscreen photo -->
+                <img id="slide47-photo" src="./assets/WhatsApp Image 2025-11-06 at 21.47.50.jpeg" alt="Sadzenie drzewka" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; display: block;">
+
+                <!-- Video (hidden initially) -->
+                <video id="slide47-video" src="./assets/oni.mp4" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; display: none;" muted playsinline></video>
             </div>
         </div>
 
@@ -1686,6 +1695,10 @@
         let isAutoPlaying = false;
         const slides = document.querySelectorAll('.slide');
         const totalSlides = slides.length;
+
+        // SLAJD 47 overlay timers
+        let slide47PhotoTimer = null;
+        let slide47VideoTimer = null;
 
         // ==========================================
         // AUDIO TRACKS CONFIGURATION
@@ -2043,6 +2056,9 @@
         function showSlide(index) {
             slides.forEach(slide => slide.classList.remove('active'));
 
+            // Clean up SLAJD 47 overlay from previous slide
+            resetSlide47Overlay();
+
             if (index >= totalSlides) {
                 currentSlide = 0;
             } else if (index < 0) {
@@ -2057,6 +2073,11 @@
 
             // Handle audio
             handleSlideAudio(currentSlide);
+
+            // Handle SLAJD 47 overlay transition
+            if (currentSlide === totalSlides - 1) { // Last slide (SLAJD 47)
+                initSlide47Overlay();
+            }
         }
 
         function changeSlide(direction) {
@@ -2124,6 +2145,61 @@
             const totalContentSlides = Array.from(slides).filter(slide => !slide.dataset.separator).length;
 
             document.getElementById('slideNumber').textContent = `${currentContentSlide} / ${totalContentSlides}`;
+        }
+
+        // ==========================================
+        // SLAJD 47 OVERLAY FUNCTIONS
+        // ==========================================
+        function initSlide47Overlay() {
+            const overlay = document.getElementById('slide47-overlay');
+            const photo = document.getElementById('slide47-photo');
+            const video = document.getElementById('slide47-video');
+
+            // After 24 seconds: show overlay with photo
+            slide47PhotoTimer = setTimeout(() => {
+                overlay.style.display = 'block';
+                setTimeout(() => {
+                    overlay.style.opacity = '1';
+                }, 10);
+            }, 24000);
+
+            // After 25 seconds: hide photo, show and play video
+            slide47VideoTimer = setTimeout(() => {
+                photo.style.display = 'none';
+                video.style.display = 'block';
+                video.currentTime = 0;
+                video.play().catch(e => console.log('Video autoplay blocked:', e));
+            }, 25000);
+        }
+
+        function resetSlide47Overlay() {
+            // Clear timers
+            if (slide47PhotoTimer) {
+                clearTimeout(slide47PhotoTimer);
+                slide47PhotoTimer = null;
+            }
+            if (slide47VideoTimer) {
+                clearTimeout(slide47VideoTimer);
+                slide47VideoTimer = null;
+            }
+
+            // Reset overlay elements
+            const overlay = document.getElementById('slide47-overlay');
+            const photo = document.getElementById('slide47-photo');
+            const video = document.getElementById('slide47-video');
+
+            if (overlay) {
+                overlay.style.opacity = '0';
+                overlay.style.display = 'none';
+            }
+            if (photo) {
+                photo.style.display = 'block';
+            }
+            if (video) {
+                video.pause();
+                video.currentTime = 0;
+                video.style.display = 'none';
+            }
         }
 
         // ==========================================
